@@ -5,7 +5,7 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^cosmicstudios.co$
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 # DO NOT REMOVE THIS LINE AND THE LINES ABOVE SSL_REDIRECT:cosmicstudios.co
-#RewriteBase /mnm.team/
+#RewriteBase /cosmicstudios.co/
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 #Session garbage collector
@@ -20,13 +20,10 @@ ErrorDocument 502 /error.php?e=502
 ErrorDocument 503 /error.php?e=503
 ErrorDocument 504 /error.php?e=504
 #Alternate Index
-#DirectoryIndex home.php
 DirectoryIndex index.php
 #Misc
-RewriteRule ^home/?$ index.php [NE,QSA]
-RewriteRule ^login/?$ login.php [NE,QSA]
-RewriteRule ^ingresar/?$ login.php [NE,QSA]
-RewriteRule ^privacy_policy/?$ privacy_policy.php [NE,QSA]
+RewriteRule ^es/?$ index.php?lang=es [NE,QSA]
+RewriteRule ^en/?$ index.php?lang=en [NE,QSA]
 #ANTISPAM
 #Block proxies almost of all kind. - tested HMA High +KA and did not passed.
 RewriteCond %{HTTP:HTTP_VIA}      !^$ [OR]
