@@ -31,6 +31,7 @@ if (isset($_GET['title'])) {
     $title = "COSMIC Studios";
 }
 ?>
+
 <head>
     <meta charset="utf-8">
     <title><?= $title; ?></title>
@@ -40,19 +41,21 @@ if (isset($_GET['title'])) {
     <meta property="og:image" content="http://cosmicstudios.co/img/logo.jpg" />
     <meta property="og:url" content="http://cosmicstudios.co/" />
     <meta property="og:site_name" content="cosmicstudios.co" />
-    <meta property="og:description" content="¿Tienes un proyecto en mente? Un placer. Somos Cosmic." />
+    <meta property="og:description" content="Empresa productora de medios y radiodifusión. Productora de fotografía y vídeo profesional." />
     <!-- Meta tags -->
-    <meta http-equiv="Content-Language" content="en,es" />
+    <meta http-equiv="Content-Language" content="es,en" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Empresa productora de medios y radiodifusión. Productora de fotografía y vídeo profesional." />
     <meta name="keywords" content="COSMIC Studios, cosmicstudios.co, producción, productora, producción audiovisual, medios, fotografía" />
-    <meta name="author" content="Mateus [buUwUr]" />
+    <meta name="author" content="Mateus [byUwUr]" />
     <meta name="copyright" content="Mateus [byUwUr]" />
+    <meta name="theme-color" content="#006" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <!-- CSS -->
+    <link href="./lib/fontawesome/css/all.min.css" rel="stylesheet" />
     <link href="./lib/prismjs/prism.css" rel="stylesheet">
     <link href="./lib/loaders.css/loaders.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700" rel="stylesheet">
@@ -65,87 +68,112 @@ if (isset($_GET['title'])) {
 </head>
 
 <body>
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main>
-        <!-- ============================================-->
-        <!-- Preloader ==================================-->
-        <div id="preloader">
-            <div class="loader"><span></span><span></span><span></span><span></span></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loading">
+            <div class="load-circle-back"></div>
+            <div class="load-circle-fore"></div>
+            <div class="load-text"></div>
         </div>
-        <!-- ============================================-->
-        <!-- End of Preloader ===========================-->
+    </div>
+    <!-- Preloader -->
 
-
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
+    <!-- Main Content -->
+    <main>
+        <!-- <section> begin -->
         <section class="p-0" id="home">
 
             <div class="container-fluid p-0 minh-100vh">
-                <div class="position-relative px-3 w-lg-50 position-lg-absolute" id="baseContent">
-                    <div class="row align-items-center minh-50vh justify-content-center py-5 minh-lg-100vh">
-                        <div class="col-8 col-sm-6 text-center">
-                            <a href="index.html">
-                  <img class="mb-5 img-fluid" src="./img/logo.png" alt="">
-                </a>
+                <div class="position-relative px-1 w-lg-50 position-lg-absolute" id="baseContent">
+                    <div class="row align-items-center minh-50vh justify-content-center py-1 minh-lg-100vh video-foreground-v">
+                        <video class="video-container" autoplay muted loop>
+                            <source src="./img/sample.mp4" type="video/mp4" />
+                        </video>
+                        <div class="col-11 text-center">
+                            <div class="img-fluid" style="min-height:128px;background-image:url(./img/logo.png);background-size:contain;background-repeat:no-repeat;background-position:center;" alt="">
+                            </div>
+                            <p class="fs-0 fs-lg-1 text-uppercase text-white ls font-weight-bold p-2 mb-0 mt-1">~ Calidad fuera de este mundo ~</p>
+                            <p class="fs--1 fs-lg-0 text-uppercase text-white ls font-weight-bold p-2 mb-2">Productora de fotografía y vídeo profesional,<br>medios, televisión y radiodifusión.</p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <a class="text-700 mx-2" href="#"> <span class="fab fa-facebook"></span></a>
+                                    <a class="mx-2" href="https://www.facebook.com/cosmicstudios.co/" target="_blank"> <span class="fs-1 fs-lg-2 text-white fab fa-facebook"></span></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a class="text-700 mx-2" href="#"> <span class="fab fa-twitter"></span></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="text-700 mx-2" href="#"> <span class="fab fa-google-plus-g"></span></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="text-700 mx-2" href="#"> <span class="fab fa-github"></span></a>
+                                    <a class="mx-2" href="https://www.instagram.com/co.cosmicstudios/" target="_blank"> <span class="fs-1 fs-lg-2 text-white fab fa-instagram"></span></a>
                                 </li>
                             </ul>
+                            <p class="p-3 m-3"></p>
                         </div>
+                        <footer class="page-footer main-page-footer">
+                            <div class="bg-holder" style="background-image:url(./img/banner_byuwur_nofocus.jpg);">
+                            </div>
+                            <!--/.bg-holder-->
+                            <div class="video-foreground-footer bg-holder">
+                            </div>
+                            <!--/.gradient-->
+                            <div class="row justify-content-center">
+                                <div class="col-lg-11">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6 text-lg-left">
+                                            <p class="fs--1 text-uppercase ls font-weight-bold mb-0">Copyright &copy; <?= date("Y"); ?> COSMIC Studios</p>
+                                        </div>
+                                        <div class="fs--1 fs-lg-0 col-lg-6 text-lg-right mt-2 mt-lg-0">
+                                            <?= $footer_text; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
                     </div>
                 </div>
                 <div class="position-relative w-lg-50 position-lg-fixed four-item-two-column" id="gridNav">
                     <div class="row h-lg-100vh">
                         <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="about">
-                            <div class="bg-holder" style="background-image:url(./img/navigation/about.jpg);">
+                            <div class="bg-holder" style="background-image:url(./img/sample.jpg);">
                             </div>
                             <!--/.bg-holder-->
-
+                            <div class="video-foreground-h bg-holder">
+                            </div>
+                            <!--/.gradient-->
                             <div class="sidebar-item">
-                                <img class="mb-2 mb-lg-3 nav-icon" src="./img/lineicons/favorites.svg" alt="">
-                                <h2 class="font-weight-light text-white fs-1 fs-xl-3">About Us</h2>
+                                <i class="fs-3 text-white fas fa-users mb-2 mb-lg-3 nav-icon" alt=""></i>
+                                <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $about; ?></h2>
                             </div>
                         </div>
                         <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="service">
                             <div class="bg-holder" style="background-image:url(./img/navigation/service.jpg);">
                             </div>
                             <!--/.bg-holder-->
-
+                            <div class="video-foreground-h bg-holder">
+                            </div>
+                            <!--/.gradient-->
                             <div class="sidebar-item">
-                                <img class="mb-2 mb-lg-3 nav-icon" src="./img/lineicons/suitcase.svg" alt="">
-                                <h2 class="font-weight-light text-white fs-1 fs-xl-3">Services</h2>
+                                <i class="fs-3 text-white fas fa-briefcase mb-2 mb-lg-3 nav-icon" alt=""></i>
+                                <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $services; ?></h2>
                             </div>
                         </div>
                         <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="portfolio">
                             <div class="bg-holder" style="background-image:url(./img/navigation/portfolio.jpg);">
                             </div>
                             <!--/.bg-holder-->
-
+                            <div class="video-foreground-h bg-holder">
+                            </div>
+                            <!--/.gradient-->
                             <div class="sidebar-item">
-                                <img class="mb-2 mb-lg-3 nav-icon" src="./img/lineicons/heart.svg" alt="">
-                                <h2 class="font-weight-light text-white fs-1 fs-xl-3">Portfolio</h2>
+                                <i class="fs-3 text-white fas fa-folder-open mb-2 mb-lg-3 nav-icon" alt=""></i>
+                                <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $portfolio; ?></h2>
                             </div>
                         </div>
                         <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="contact">
                             <div class="bg-holder" style="background-image:url(./img/navigation/contact.jpg);">
                             </div>
                             <!--/.bg-holder-->
-
+                            <div class="video-foreground-h bg-holder">
+                            </div>
+                            <!--/.gradient-->
                             <div class="sidebar-item">
-                                <img class="mb-2 mb-lg-3 nav-icon" src="./img/lineicons/placeholder.svg" alt="">
-                                <h2 class="font-weight-light text-white fs-1 fs-xl-3">Contact</h2>
+                                <i class="fs-3 text-white fas fa-map-marked-alt mb-2 mb-lg-3 nav-icon" alt=""></i>
+                                <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $contact; ?></h2>
                             </div>
                         </div>
                     </div>
@@ -154,8 +182,7 @@ if (isset($_GET['title'])) {
             <!-- end of .container-->
 
         </section>
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
+        <!-- <section> close -->
 
 
         <div class="page position-absolute t-0 w-100" id="about">
@@ -163,8 +190,8 @@ if (isset($_GET['title'])) {
                 <div class="col-lg-9 order-1 order-lg-0 page-content pt-6 pt-lg-0">
 
 
-                    <!-- ============================================-->
-                    <!-- <section> begin ============================-->
+
+                    <!-- <section> begin -->
                     <section class="pt-5 pt-xl-7 pt-xxl-8">
 
                         <div class="container-fluid">
@@ -219,14 +246,14 @@ if (isset($_GET['title'])) {
                         <!-- end of .container-->
 
                     </section>
-                    <!-- <section> close ============================-->
-                    <!-- ============================================-->
+                    <!-- <section> close -->
 
 
 
 
-                    <!-- ============================================-->
-                    <!-- <section> begin ============================-->
+
+
+                    <!-- <section> begin -->
                     <section class="pt-0 text-center">
 
                         <div class="container-fluid">
@@ -291,25 +318,25 @@ if (isset($_GET['title'])) {
                         <!-- end of .container-->
 
                     </section>
-                    <!-- <section> close ============================-->
-                    <!-- ============================================-->
+                    <!-- <section> close -->
+
 
 
                     <footer class="page-footer">
-                        <div class="bg-holder" style="background-image:url(./img/sidebars/about.jpg);background-position: 0 27%; transform: scale(1.1);">
+                        <div class="bg-holder" style="background-image:url(./img/banner_byuwur_nofocus.jpg);">
                         </div>
                         <!--/.bg-holder-->
-
+                        <div class="video-foreground-footer bg-holder">
+                        </div>
+                        <!--/.gradient-->
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 text-lg-left">
-                                        <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-                                            Copyright &copy; 2020 Tus datos!!!</p>
+                                        <p class="fs--1 text-uppercase ls font-weight-bold mb-0">Copyright &copy; <?= date("Y"); ?> COSMIC Studios</p>
                                     </div>
-                                    <div class="col-lg-6 text-lg-right mt-2 mt-lg-0">
-
-                                        <a class="text-light" href="https://rohisa.net/">Fernando RH</a>
+                                    <div class="fs--1 fs-lg-0 col-lg-6 text-lg-right mt-2 mt-lg-0">
+                                        <?= $footer_text; ?>
                                     </div>
                                 </div>
                             </div>
@@ -317,12 +344,14 @@ if (isset($_GET['title'])) {
                     </footer>
                 </div>
                 <div class="col-lg-3 col-12 t-0 order-0 order-lg-1 position-absolute position-lg-relative">
-                    <div class="h-lg-100vh sticky-top py-4 sticky-area"><span class="btn-close"><img class="d-none d-lg-block times" src="./img/times.svg" width="25" alt=""/><img class="d-lg-none" src="./img/times-black.svg" width="18" alt=""/></span>
+                    <div class="h-lg-100vh sticky-top py-4 sticky-area"><span class="btn-close"><img class="d-none d-lg-block times" src="./img/times.svg" width="25" alt="" /><img class="d-lg-none" src="./img/times-black.svg" width="18" alt="" /></span>
                         <div class="bg-holder" style="background-image:url(./img/sidebars/about.jpg);">
                         </div>
                         <!--/.bg-holder-->
-
-                        <h1 class="page-title">About Us</h1>
+                        <div class="video-foreground-v bg-holder">
+                        </div>
+                        <!--/.gradient-->
+                        <h1 class="page-title"><?= $about; ?></h1>
                     </div>
                 </div>
             </div>
@@ -332,8 +361,8 @@ if (isset($_GET['title'])) {
                 <div class="col-lg-9 order-1 order-lg-0 page-content pt-6 pt-lg-0">
 
 
-                    <!-- ============================================-->
-                    <!-- <section> begin ============================-->
+
+                    <!-- <section> begin -->
                     <section class="pt-5 pt-xl-7 pt-xxl-8">
 
                         <div class="container-fluid">
@@ -366,14 +395,14 @@ if (isset($_GET['title'])) {
                         <!-- end of .container-->
 
                     </section>
-                    <!-- <section> close ============================-->
-                    <!-- ============================================-->
+                    <!-- <section> close -->
 
 
 
 
-                    <!-- ============================================-->
-                    <!-- <section> begin ============================-->
+
+
+                    <!-- <section> begin -->
                     <section class="bg-light text-center">
 
                         <div class="container-fluid">
@@ -387,7 +416,7 @@ if (isset($_GET['title'])) {
                                         <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 mb-4 mb-xl-0">
                                             <div class="rounded border py-6 bg-white">
                                                 <h4 class="font-weight-regular">Basic</h4>
-                                                <h2>$0<span class="font-weight-regular fs-0"> /  month</span></h2>
+                                                <h2>$0<span class="font-weight-regular fs-0"> / month</span></h2>
                                                 <ul class="list-unstyled text-dark my-4">
                                                     <li>15 Projects</li>
                                                     <li>30 GB Storage</li>
@@ -401,7 +430,7 @@ if (isset($_GET['title'])) {
                                         <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 mb-4 mb-lg-0">
                                             <div class="rounded border py-6 bg-white">
                                                 <h4 class="font-weight-regular text-primary">Business</h4>
-                                                <h2 class="text-primary">$59<span class="font-weight-regular fs-0"> /  month</span></h2>
+                                                <h2 class="text-primary">$59<span class="font-weight-regular fs-0"> / month</span></h2>
                                                 <ul class="list-unstyled text-dark my-4">
                                                     <li>50 Projects</li>
                                                     <li>30 GB Storage</li>
@@ -415,7 +444,7 @@ if (isset($_GET['title'])) {
                                         <div class="col-sm-6 col-md-4 col-lg-6 col-xl-4 mb-4 mb-lg-0">
                                             <div class="rounded border py-6 bg-white">
                                                 <h4 class="font-weight-regular">Advanced</h4>
-                                                <h2>$99<span class="font-weight-regular fs-0"> /  month</span></h2>
+                                                <h2>$99<span class="font-weight-regular fs-0"> / month</span></h2>
                                                 <ul class="list-unstyled text-dark my-4">
                                                     <li>Unlimited</li>
                                                     <li>30 GB Storage</li>
@@ -433,14 +462,14 @@ if (isset($_GET['title'])) {
                         <!-- end of .container-->
 
                     </section>
-                    <!-- <section> close ============================-->
-                    <!-- ============================================-->
+                    <!-- <section> close -->
 
 
 
 
-                    <!-- ============================================-->
-                    <!-- <section> begin ============================-->
+
+
+                    <!-- <section> begin -->
                     <section>
 
                         <div class="container-fluid">
@@ -491,25 +520,25 @@ if (isset($_GET['title'])) {
                         <!-- end of .container-->
 
                     </section>
-                    <!-- <section> close ============================-->
-                    <!-- ============================================-->
+                    <!-- <section> close -->
+
 
 
                     <footer class="page-footer">
-                        <div class="bg-holder" style="background-image:url(./img/sidebars/service.jpg);background-position: 0 41%; transform: scale(1.1);">
+                        <div class="bg-holder" style="background-image:url(./img/banner_byuwur_nofocus.jpg);">
                         </div>
                         <!--/.bg-holder-->
-
+                        <div class="video-foreground-footer bg-holder">
+                        </div>
+                        <!--/.gradient-->
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 text-lg-left">
-                                        <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-                                            Copyright &copy; 2020 Tus datos!!!</p>
+                                        <p class="fs--1 text-uppercase ls font-weight-bold mb-0">Copyright &copy; <?= date("Y"); ?> COSMIC Studios</p>
                                     </div>
-                                    <div class="col-lg-6 text-lg-right mt-2 mt-lg-0">
-
-                                        <a class="text-light" href="https://rohisa.net/">Fernando RH</a>
+                                    <div class="fs--1 fs-lg-0 col-lg-6 text-lg-right mt-2 mt-lg-0">
+                                        <?= $footer_text; ?>
                                     </div>
                                 </div>
                             </div>
@@ -517,12 +546,14 @@ if (isset($_GET['title'])) {
                     </footer>
                 </div>
                 <div class="col-lg-3 col-12 t-0 order-0 order-lg-1 position-absolute position-lg-relative">
-                    <div class="h-lg-100vh sticky-top py-4 sticky-area"><span class="btn-close"><img class="d-none d-lg-block times" src="./img/times.svg" width="25" alt=""/><img class="d-lg-none" src="./img/times-black.svg" width="18" alt=""/></span>
+                    <div class="h-lg-100vh sticky-top py-4 sticky-area"><span class="btn-close"><img class="d-none d-lg-block times" src="./img/times.svg" width="25" alt="" /><img class="d-lg-none" src="./img/times-black.svg" width="18" alt="" /></span>
                         <div class="bg-holder" style="background-image:url(./img/sidebars/service.jpg);">
                         </div>
                         <!--/.bg-holder-->
-
-                        <h1 class="page-title">Our Service</h1>
+                        <div class="video-foreground-v bg-holder">
+                        </div>
+                        <!--/.gradient-->
+                        <h1 class="page-title"><?= $services; ?></h1>
                     </div>
                 </div>
             </div>
@@ -532,8 +563,8 @@ if (isset($_GET['title'])) {
                 <div class="col-lg-9 order-1 order-lg-0 page-content pt-6 pt-lg-0">
 
 
-                    <!-- ============================================-->
-                    <!-- <section> begin ============================-->
+
+                    <!-- <section> begin -->
                     <section class="text-center pt-5 pt-xl-7 pt-xxl-8 text-center" id="boots4-projects">
 
                         <div class="container-fluid">
@@ -552,41 +583,41 @@ if (isset($_GET['title'])) {
                                             <div class="item px-3 text-uppercase" data-filter=".illustration">Illustration</div>
                                         </div>
                                         <div class="row no-gutters sortable-container sortable-container-gutter-fix">
-                                            <a class="col-6 col-md-4 sortable-item p-2 interior" href="./img/projects/project-7-f.jpg" data-lightbox="image" data-title="my caption">
-                          <img class="w-100 rounded" src="./img/projects/project-7.jpg" alt="" />
-                        </a>
-                                            <a class="col-6 col-md-4 sortable-item p-2 studio" href="./img/projects/project-11-f.jpg" data-lightbox="image" data-title="my caption">
-                          <img class="w-100 rounded" src="./img/projects/project-11.jpg" alt="" />
-                        </a>
-                                            <a class="col-6 col-md-4 sortable-item p-2 photography" href="./img/projects/project-8-f.jpg" data-lightbox="image" data-title="my caption">
-                          <img class="w-100 rounded" src="./img/projects/project-8.jpg" alt="" />
-                        </a>
-                                            <a class="col-6 col-md-4 sortable-item p-2 studio" href="./img/projects/project-9-f.jpg" data-lightbox="image" data-title="my caption">
-                          <img class="w-100 rounded" src="./img/projects/project-9.jpg" alt="" />
-                        </a>
-                                            <a class="col-6 col-md-4 sortable-item p-2 photography" href="./img/projects/project-12-f.jpg" data-lightbox="image" data-title="my caption">
-                          <img class="w-100 rounded" src="./img/projects/project-12.jpg" alt="" />
-                        </a>
+                                            <a class="col-6 col-md-4 sortable-item p-2 interior" href="./img/projects/project-7.jpg" data-lightbox="image" data-title="my caption">
+                                                <img class="w-100 rounded" src="./img/projects/project-7.jpg" alt="" />
+                                            </a>
+                                            <a class="col-6 col-md-4 sortable-item p-2 studio" href="./img/projects/project-11.jpg" data-lightbox="image" data-title="my caption">
+                                                <img class="w-100 rounded" src="./img/projects/project-11.jpg" alt="" />
+                                            </a>
+                                            <a class="col-6 col-md-4 sortable-item p-2 photography" href="./img/projects/project-8.jpg" data-lightbox="image" data-title="my caption">
+                                                <img class="w-100 rounded" src="./img/projects/project-8.jpg" alt="" />
+                                            </a>
+                                            <a class="col-6 col-md-4 sortable-item p-2 studio" href="./img/projects/project-9.jpg" data-lightbox="image" data-title="my caption">
+                                                <img class="w-100 rounded" src="./img/projects/project-9.jpg" alt="" />
+                                            </a>
+                                            <a class="col-6 col-md-4 sortable-item p-2 photography" href="./img/projects/project-12.jpg" data-lightbox="image" data-title="my caption">
+                                                <img class="w-100 rounded" src="./img/projects/project-12.jpg" alt="" />
+                                            </a>
                                             <div class="col-6 col-md-4 sortable-item p-2 illustration">
                                                 <img class="rounded w-100" src="./img/projects/project-13.jpg" alt="" />
                                                 <a class="video-modal position-absolute r-0 b-0 pr-4 pb-3" href="https://www.youtube.com/watch?v=QD7pOiZBgy0" data-start="01" data-end="75">
-                            <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 274.19 274.19">
-                              <defs>
-                                <style>
-                                  .play-path {
-                                    fill: none;
-                                    stroke: #ffffff;
-                                    stroke-linecap: round;
-                                    stroke-linejoin: round;
-                                    stroke-width: 12px;
-                                  }
-                                </style>
-                              </defs>
-                              <g>
-                                <path class="play-path" d="M208.31,29.4A129.12,129.12,0,1,1,137.1,8m-1.48,170.53L199.94,137,104.07,79.46v113"></path>
-                              </g>
-                            </svg>
-                          </a>
+                                                    <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 274.19 274.19">
+                                                        <defs>
+                                                            <style>
+                                                                .play-path {
+                                                                    fill: none;
+                                                                    stroke: #ffffff;
+                                                                    stroke-linecap: round;
+                                                                    stroke-linejoin: round;
+                                                                    stroke-width: 12px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <g>
+                                                            <path class="play-path" d="M208.31,29.4A129.12,129.12,0,1,1,137.1,8m-1.48,170.53L199.94,137,104.07,79.46v113"></path>
+                                                        </g>
+                                                    </svg>
+                                                </a>
                                             </div>
                                             <div class="col-8 sortable-item p-2" id="owl-slide">
                                                 <div class="embed-responsive embed-responsive-4by3">
@@ -596,9 +627,9 @@ if (isset($_GET['title'])) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a class="col-6 col-md-4 sortable-item p-2 photography" href="./img/projects/project-10-f.jpg" data-lightbox="image" data-title="my caption">
-                          <img class="w-100 rounded" src="./img/projects/project-10.jpg" alt="" />
-                        </a>
+                                            <a class="col-6 col-md-4 sortable-item p-2 photography" href="./img/projects/project-10.jpg" data-lightbox="image" data-title="my caption">
+                                                <img class="w-100 rounded" src="./img/projects/project-10.jpg" alt="" />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -614,25 +645,25 @@ if (isset($_GET['title'])) {
                         <!-- end of .container-->
 
                     </section>
-                    <!-- <section> close ============================-->
-                    <!-- ============================================-->
+                    <!-- <section> close -->
+
 
 
                     <footer class="page-footer">
-                        <div class="bg-holder" style="background-image:url(./img/sidebars/portfolio.jpg);background-position: 0 27%; transform: scale(1.1);">
+                        <div class="bg-holder" style="background-image:url(./img/banner_byuwur_nofocus.jpg);">
                         </div>
                         <!--/.bg-holder-->
-
+                        <div class="video-foreground-footer bg-holder">
+                        </div>
+                        <!--/.gradient-->
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 text-lg-left">
-                                        <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-                                            Copyright &copy; 2020 Tus datos!!!</p>
+                                        <p class="fs--1 text-uppercase ls font-weight-bold mb-0">Copyright &copy; <?= date("Y"); ?> COSMIC Studios</p>
                                     </div>
-                                    <div class="col-lg-6 text-lg-right mt-2 mt-lg-0">
-
-                                        <a class="text-light" href="https://rohisa.net/">Fernando RH</a>
+                                    <div class="fs--1 fs-lg-0 col-lg-6 text-lg-right mt-2 mt-lg-0">
+                                        <?= $footer_text; ?>
                                     </div>
                                 </div>
                             </div>
@@ -640,12 +671,14 @@ if (isset($_GET['title'])) {
                     </footer>
                 </div>
                 <div class="col-lg-3 col-12 t-0 order-0 order-lg-1 position-absolute position-lg-relative">
-                    <div class="h-lg-100vh sticky-top py-4 sticky-area"><span class="btn-close"><img class="d-none d-lg-block times" src="./img/times.svg" width="25" alt=""/><img class="d-lg-none" src="./img/times-black.svg" width="18" alt=""/></span>
+                    <div class="h-lg-100vh sticky-top py-4 sticky-area"><span class="btn-close"><img class="d-none d-lg-block times" src="./img/times.svg" width="25" alt="" /><img class="d-lg-none" src="./img/times-black.svg" width="18" alt="" /></span>
                         <div class="bg-holder" style="background-image:url(./img/sidebars/portfolio.jpg);">
                         </div>
                         <!--/.bg-holder-->
-
-                        <h1 class="page-title">Portfolio</h1>
+                        <div class="video-foreground-v bg-holder">
+                        </div>
+                        <!--/.gradient-->
+                        <h1 class="page-title"><?= $portfolio; ?></h1>
                     </div>
                 </div>
             </div>
@@ -655,8 +688,8 @@ if (isset($_GET['title'])) {
                 <div class="col-lg-9 order-1 order-lg-0 page-content pt-6 pt-lg-0">
 
 
-                    <!-- ============================================-->
-                    <!-- <section> begin ============================-->
+
+                    <!-- <section> begin -->
                     <section class="pt-5 pt-xl-7 pt-xxl-8">
 
                         <div class="container-fluid">
@@ -680,7 +713,8 @@ if (isset($_GET['title'])) {
                                                         <div class="col">
                                                             <h5 class="mb-1">Boots4 Org</h5>
                                                             <p>35 King Street
-                                                                <br/>Bristol, BS1 4DZ</p>
+                                                                <br />Bristol, BS1 4DZ
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -710,19 +744,10 @@ if (isset($_GET['title'])) {
                                                 <div class="col-auto" style="min-width: 100%;">
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item mx-2">
-                                                            <a class="text-700" href="#"><span class="fab fa-facebook-f"></span></a>
+                                                            <a class="text-700" href="https://www.facebook.com/cosmicstudios.co/" target="_blank"> <span class="fab fa-facebook"></span></a>
                                                         </li>
                                                         <li class="list-inline-item mx-2">
-                                                            <a class="text-700" href="#"> <span class="fab fa-twitter"></span></a>
-                                                        </li>
-                                                        <li class="list-inline-item mx-2">
-                                                            <a class="text-700" href="#"> <span class="fab fa-linkedin-in"></span></a>
-                                                        </li>
-                                                        <li class="list-inline-item mx-2">
-                                                            <a class="text-700" href="#"> <span class="fab fa-youtube"></span></a>
-                                                        </li>
-                                                        <li class="list-inline-item mx-2">
-                                                            <a class="text-700" href="#"><span class="fab fa-google-plus-g"></span></a>
+                                                            <a class="text-700" href="https://www.instagram.com/co.cosmicstudios/" target="_blank"> <span class="fab fa-instagram"></span></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -754,38 +779,32 @@ if (isset($_GET['title'])) {
                             </div>
                             <div class="row justify-content-center mt-4">
                                 <div class="col-lg-10">
-                                    <div class="rounded googlemap minh-50vh" data-latlng="48.8583701,2.2922873,17" data-scrollwheel="false" data-icon="./img/map-marker.png" data-zoom="17" data-theme="Default">
-                                        <div class="marker-content py-3">
-                                            <h5>Eiffel Tower</h5>
-                                            <p>Gustave Eiffel's iconic, wrought-iron 1889 tower,
-                                                <br/> with steps and elevators to observation decks. </p>
-                                        </div>
-                                    </div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.3533066507107!2d-74.88934868467403!3d4.150743947334912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3ed34df51acbb1%3A0xbdb77d4ff326b7a4!2sCosmic%20Studios!5e0!3m2!1ses-419!2sco!4v1632035119405!5m2!1ses-419!2sco" width="100%" height="360px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
-                        <!-- end of .container-->
+                        <!-- end of .container -->
 
                     </section>
-                    <!-- <section> close ============================-->
-                    <!-- ============================================-->
+                    <!-- <section> close -->
+
 
 
                     <footer class="page-footer">
-                        <div class="bg-holder" style="background-image:url(./img/sidebars/contact.jpg);background-position: 0 37%; transform: scale(1.1);">
+                        <div class="bg-holder" style="background-image:url(./img/banner_byuwur_nofocus.jpg);">
                         </div>
                         <!--/.bg-holder-->
-
+                        <div class="video-foreground-footer bg-holder">
+                        </div>
+                        <!--/.gradient-->
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 text-lg-left">
-                                        <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-                                            Copyright &copy; 2020 Tus datos!!!</p>
+                                        <p class="fs--1 text-uppercase ls font-weight-bold mb-0">Copyright &copy; <?= date("Y"); ?> COSMIC Studios</p>
                                     </div>
-                                    <div class="col-lg-6 text-lg-right mt-2 mt-lg-0">
-
-                                        <a class="text-light" href="https://rohisa.net/">Fernando RH</a>
+                                    <div class="fs--1 fs-lg-0 col-lg-6 text-lg-right mt-2 mt-lg-0">
+                                        <?= $footer_text; ?>
                                     </div>
                                 </div>
                             </div>
@@ -793,20 +812,20 @@ if (isset($_GET['title'])) {
                     </footer>
                 </div>
                 <div class="col-lg-3 col-12 t-0 order-0 order-lg-1 position-absolute position-lg-relative">
-                    <div class="h-lg-100vh sticky-top py-4 sticky-area"><span class="btn-close"><img class="d-none d-lg-block times" src="./img/times.svg" width="25" alt=""/><img class="d-lg-none" src="./img/times-black.svg" width="18" alt=""/></span>
+                    <div class="h-lg-100vh sticky-top py-4 sticky-area"><span class="btn-close"><img class="d-none d-lg-block times" src="./img/times.svg" width="25" alt="" /><img class="d-lg-none" src="./img/times-black.svg" width="18" alt="" /></span>
                         <div class="bg-holder" style="background-image:url(./img/sidebars/contact.jpg);">
                         </div>
                         <!--/.bg-holder-->
-
-                        <h1 class="page-title">Contact Us</h1>
+                        <div class="video-foreground-v bg-holder">
+                        </div>
+                        <!--/.gradient-->
+                        <h1 class="page-title"><?= $contact; ?></h1>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
+    <!-- Main Content -->
 
     <!-- JS -->
     <script src="./js/jquery.min.js"></script>
@@ -824,6 +843,6 @@ if (isset($_GET['title'])) {
     <script src="./lib/isotope-packery/packery-mode.pkgd.min.js"></script>
     <script src="./lib/lightbox2/js/lightbox.js"></script>
     <script src="./js/theme.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARdVcREeBK44lIWnv5-iPijKqvlSAVwbw&callback=initMap" async></script>
 </body>
+
 </html>
