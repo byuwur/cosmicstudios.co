@@ -49,11 +49,11 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-transition: ease all 0.33s;
-  -o-transition: ease all 0.33s;
-  -ms-transition: ease all 0.33s;
-  -moz-transition: ease all 0.33s;
-  transition: ease all 0.33s;
+  -webkit-transition: ease-in-out 0.33s;
+  -o-transition: ease-in-out 0.33s;
+  -ms-transition: ease-in-out 0.33s;
+  -moz-transition: ease-in-out 0.33s;
+  transition: ease-in-out 0.33s;
 
 }
 
@@ -85,11 +85,11 @@ body {
   color: #334;
   text-align: left;
   background-color: #eef;
-  -webkit-transition: ease all 0.33s;
-  -o-transition: ease all 0.33s;
-  -ms-transition: ease all 0.33s;
-  -moz-transition: ease all 0.33s;
-  transition: ease all 0.33s;
+  -webkit-transition: ease-in-out 0.33s;
+  -o-transition: ease-in-out 0.33s;
+  -ms-transition: ease-in-out 0.33s;
+  -moz-transition: ease-in-out 0.33s;
+  transition: ease-in-out 0.33s;
 }
 
 [tabindex="-1"]:focus {
@@ -2913,6 +2913,46 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
+.btn-submit {
+  color: #fff;
+  background-color: #002436;
+  border-color: #004E75;
+}
+
+.btn-submit:hover {
+  color: #fff;
+  background-color: #004E75;
+  border-color: #0079B5;
+}
+
+.btn-submit:focus,
+.btn-submit.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(243, 127, 41, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(243, 127, 41, 0.5);
+}
+
+.btn-submit.disabled,
+.btn-submit:disabled {
+  color: #fff;
+  background-color: #002436;
+  border-color: #002436;
+}
+
+.btn-submit:not(:disabled):not(.disabled):active,
+.btn-submit:not(:disabled):not(.disabled).active,
+.show > .btn-submit.dropdown-toggle {
+  color: #fff;
+  background-color: #0079B5;
+  border-color: #004E75;
+}
+
+.btn-submit:not(:disabled):not(.disabled):active:focus,
+.btn-submit:not(:disabled):not(.disabled).active:focus,
+.show > .btn-submit.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(243, 127, 41, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(243, 127, 41, 0.5);
+}
+
 .btn-primary {
   color: #fff;
   background-color: #045bc1;
@@ -3612,9 +3652,9 @@ input[type="button"].btn-block {
 }
 
 .fade {
-  -webkit-transition: opacity 0.33s linear;
-  -o-transition: opacity 0.33s linear;
-  transition: opacity 0.33s linear;
+  -webkit-transition: opacity 0.33s ease-in-out;
+  -o-transition: opacity 0.33s ease-in-out;
+  transition: opacity 0.33s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -3637,9 +3677,9 @@ input[type="button"].btn-block {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+  -webkit-transition: height 0.33s ease-in-out;
+  -o-transition: height 0.33s ease-in-out;
+  transition: height 0.33s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -6002,9 +6042,9 @@ input[type="button"].btn-block {
   text-align: center;
   white-space: nowrap;
   background-color: #045bc1;
-  -webkit-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
-  transition: width 0.6s ease;
+  -webkit-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -6050,8 +6090,8 @@ input[type="button"].btn-block {
 }
 
 .progress-bar-animated {
-  -webkit-animation: progress-bar-stripes 1s linear infinite;
-  animation: progress-bar-stripes 1s linear infinite;
+  -webkit-animation: progress-bar-stripes 1s ease-in-out infinite;
+  animation: progress-bar-stripes 1s ease-in-out infinite;
 }
 
 .media {
@@ -6345,11 +6385,11 @@ button.close {
 }
 
 .modal.fade .modal-dialog {
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
-  -o-transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.33s ease-in-out;
+  transition: -webkit-transform 0.33s ease-in-out;
+  -o-transition: transform 0.33s ease-in-out;
+  transition: transform 0.33s ease-in-out;
+  transition: transform 0.33s ease-in-out, -webkit-transform 0.33s ease-in-out;
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
@@ -6861,11 +6901,11 @@ button.close {
 .carousel-item-next,
 .carousel-item-prev {
   display: block;
-  -webkit-transition: -webkit-transform 0.6s ease;
-  transition: -webkit-transform 0.6s ease;
-  -o-transition: transform 0.6s ease;
-  transition: transform 0.6s ease;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  -o-transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -12174,11 +12214,11 @@ a.text-dark:focus {
 }
 
 .sidebar-item-wrapper .bg-holder {
-  -webkit-transition: -webkit-transform 0.5s linear;
-  transition: -webkit-transform 0.5s linear;
-  -o-transition: transform 0.5s linear;
-  transition: transform 0.5s linear;
-  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.33s ease-in-out;
+  transition: -webkit-transform 0.33s ease-in-out;
+  -o-transition: transform 0.33s ease-in-out;
+  transition: transform 0.33s ease-in-out;
+  transition: transform 0.33s ease-in-out, -webkit-transform 0.33s ease-in-out;
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
@@ -12248,12 +12288,12 @@ a.text-dark:focus {
 }
 
 .sticky-area .btn-close .times {
-  -webkit-transition: opacity 0.33s linear, -webkit-transform 0.33s ease-in;
-  transition: opacity 0.33s linear, -webkit-transform 0.33s ease-in;
-  -o-transition: transform 0.33s ease-in, opacity 0.33s linear;
-  transition: transform 0.33s ease-in, opacity 0.33s linear;
-  transition: transform 0.33s ease-in, opacity 0.33s linear,
-    -webkit-transform 0.33s ease-in;
+  -webkit-transition: opacity 0.33s ease-in-out, -webkit-transform 0.33s ease-in-out;
+  transition: opacity 0.33s ease-in-out, -webkit-transform 0.33s ease-in-out;
+  -o-transition: transform 0.33s ease-in-out, opacity 0.33s ease-in-out;
+  transition: transform 0.33s ease-in-out, opacity 0.33s ease-in-out;
+  transition: transform 0.33s ease-in-out, opacity 0.33s ease-in-out,
+    -webkit-transform 0.33s ease-in-out;
   opacity: 0.5;
 }
 
@@ -12409,9 +12449,9 @@ a.text-dark:focus {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   line-height: 48px;
   text-align: center;
-  -webkit-transition: top 0.33s linear, right 0.33s linear, opacity 0.1s linear;
-  -o-transition: top 0.33s linear, right 0.33s linear, opacity 0.1s linear;
-  transition: top 0.33s linear, right 0.33s linear, opacity 0.1s linear;
+  -webkit-transition: top 0.33s ease-in-out, right 0.33s ease-in-out, opacity 0.1s ease-in-out;
+  -o-transition: top 0.33s ease-in-out, right 0.33s ease-in-out, opacity 0.1s ease-in-out;
+  transition: top 0.33s ease-in-out, right 0.33s ease-in-out, opacity 0.1s ease-in-out;
   cursor: pointer;
 }
 
@@ -15394,11 +15434,11 @@ a.text-white:focus {
   right: 0;
   background: #111;
   z-index: 1001;
-  -webkit-transition: ease all 0.33s;
-  -o-transition: ease all 0.33s;
-  -ms-transition: ease all 0.33s;
-  -moz-transition: ease all 0.33s;
-  transition: ease all 0.33s;
+  -webkit-transition: ease-in-out 0.33s;
+  -o-transition: ease-in-out 0.33s;
+  -ms-transition: ease-in-out 0.33s;
+  -moz-transition: ease-in-out 0.33s;
+  transition: ease-in-out 0.33s;
 }
 .load-text {
   position: absolute;

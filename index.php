@@ -128,16 +128,16 @@ if (isset($_GET['title'])) {
                 </div>
                 <div class="position-relative w-lg-50 position-lg-fixed four-item-two-column" id="gridNav">
                     <div class="row h-lg-100vh">
-                        <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="about">
-                            <div class="bg-holder" style="background-image:url(./img/sample.jpg);">
+                        <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="portfolio">
+                            <div class="bg-holder" style="background-image:url(./img/navigation/portfolio.jpg);">
                             </div>
                             <!--/.bg-holder-->
                             <div class="video-foreground-h bg-holder">
                             </div>
                             <!--/.gradient-->
                             <div class="sidebar-item">
-                                <i class="fs-3 text-white fas fa-users mb-2 mb-lg-3 nav-icon" alt=""></i>
-                                <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $about; ?></h2>
+                                <i class="fs-3 text-white fas fa-folder-open mb-2 mb-lg-3 nav-icon" alt=""></i>
+                                <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $portfolio; ?></h2>
                             </div>
                         </div>
                         <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="service">
@@ -152,16 +152,16 @@ if (isset($_GET['title'])) {
                                 <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $services; ?></h2>
                             </div>
                         </div>
-                        <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="portfolio">
-                            <div class="bg-holder" style="background-image:url(./img/navigation/portfolio.jpg);">
+                        <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="about">
+                            <div class="bg-holder" style="background-image:url(./img/sample.jpg);">
                             </div>
                             <!--/.bg-holder-->
                             <div class="video-foreground-h bg-holder">
                             </div>
                             <!--/.gradient-->
                             <div class="sidebar-item">
-                                <i class="fs-3 text-white fas fa-folder-open mb-2 mb-lg-3 nav-icon" alt=""></i>
-                                <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $portfolio; ?></h2>
+                                <i class="fs-3 text-white fas fa-users mb-2 mb-lg-3 nav-icon" alt=""></i>
+                                <h2 class="font-weight-light text-white fs-1 fs-xl-3"><?= $about; ?></h2>
                             </div>
                         </div>
                         <div class="col-6 minh-25vh h-lg-50vh sidebar-item-wrapper py-5" data-content="contact">
@@ -771,7 +771,7 @@ if (isset($_GET['title'])) {
                                                     <textarea class="form-control" rows="4" name="message" placeholder="" required="required"></textarea>
                                                 </div>
                                                 <div class="zform-feedback"></div>
-                                                <button class="btn btn-block btn-warning mt-4" type="submit">Submit</button>
+                                                <button class="btn btn-block btn-submit mt-4" type="submit">Submit</button>
                                             </form>
                                         </div>
                                     </div>
