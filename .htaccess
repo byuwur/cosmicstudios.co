@@ -24,6 +24,9 @@ DirectoryIndex index.php
 #Misc
 RewriteRule ^es/?$ index.php?lang=es [NE,QSA]
 RewriteRule ^en/?$ index.php?lang=en [NE,QSA]
+RewriteRule ^hola/?$ index.php?lang=es [NE,QSA]
+RewriteRule ^home/?$ index.php?lang=en [NE,QSA]
+RewriteRule ^hola/?$ index.php?lang=es [NE,QSA]
 #ANTISPAM
 #Block proxies almost of all kind. - tested HMA High +KA and did not passed.
 RewriteCond %{HTTP:HTTP_VIA}      !^$ [OR]

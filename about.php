@@ -1,4 +1,27 @@
 <?php
+if (isset($_GET['lang'])) {
+    if ($_GET['lang'] == 'es' || $_GET['lang'] == 'en') {
+        if ($_GET['lang'] == 'es') {
+            $_GET['title'] = "Equipo";
+        } else if ($_GET['lang'] == 'en') {
+            $_GET['title'] = "Team";
+        }
+    } else {
+        $_GET['title'] = "Equipo";
+    }
+} else if (isset($_COOKIE['lang'])) {
+    if ($_COOKIE['lang'] == 'es' || $_COOKIE['lang'] == 'en') {
+        if ($_COOKIE['lang'] == 'es') {
+            $_GET['title'] = "Equipo";
+        } else if ($_COOKIE['lang' == 'en']) {
+            $_GET['title'] = "Team";
+        }
+    } else {
+        $_GET['title'] = "Equipo";
+    }
+} else {
+    $_GET['title'] = "Equipo";
+}
 $_GET['title'] = "Equipo";
 require("./header.php");
 ?>
