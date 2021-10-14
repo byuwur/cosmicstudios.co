@@ -1,8 +1,18 @@
 <?php
-$_GET['title'] = "Inicio";
+if (isset($_GET['lang'])) {
+    if ($_GET['lang'] == 'es') {
+        require("./lang/lang_es.php");
+    } else if ($_GET['lang'] == 'en') {
+        require("./lang/lang_en.php");
+    }
+} else if (isset($_COOKIE['lang'])) {
+    require("./lang/lang_" . $_COOKIE['lang'] . ".php");
+} else {
+    require("./lang/lang_es.php");
+}
+$_GET['title'] = $contact;
 require("./header.php");
 ?>
-<!-- Breadcrumb Begin -->
 <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
     <div class="container">
         <div class="row">
@@ -18,7 +28,6 @@ require("./header.php");
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
 
 <!-- Contact Widget Section Begin -->
 <section class="contact-widget spad">
@@ -68,7 +77,7 @@ require("./header.php");
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="contact__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798902705!2d-74.25986790365917!3d40.697670067823786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1596152431947!5m2!1sen!2sbd" height="450" style="border:0;"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.35330665071!2d-74.889348684749!3d4.150743947335077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3ed34df51acbb1%3A0xbdb77d4ff326b7a4!2sCosmic%20Studios!5e0!3m2!1ses-419!2sco!4v1634200215224!5m2!1ses-419!2sco" height="480" style="border:0;"></iframe>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -89,4 +98,5 @@ require("./header.php");
 <!-- Call To Action Section End -->
 <?php
 require("footer.php");
+echo '<script type="text/javascript"> active_contact(); </script>';
 ?>

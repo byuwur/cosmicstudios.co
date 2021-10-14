@@ -5,9 +5,13 @@
         Preloader
     --------------------*/
   $(window).on("load", function () {
-    $(".loader").fadeOut();
-    $("#preloder").delay(200).fadeOut("slow");
-
+    $(".load-circle-back").delay(500).fadeOut();
+    $(".load-circle-fore").delay(500).fadeOut();
+    $(".load-text").delay(500).fadeOut();
+    $(".loading").delay(1000).fadeOut();
+    $(".loading").delay(1000).queue(function () {
+        $(this).remove();
+      });
     /*------------------
             Portfolio filter
         --------------------*/
@@ -55,7 +59,7 @@
     animateIn: "fadeIn",
     items: 1,
     margin: 0,
-    smartSpeed: 1200,
+    smartSpeed: 3000,
     autoHeight: false,
     autoplay: true,
   });
@@ -79,7 +83,7 @@
     items: 3,
     dots: true,
     dotsEach: 2,
-    smartSpeed: 1200,
+    smartSpeed: 2000,
     autoHeight: false,
     autoplay: true,
     responsive: {
@@ -104,7 +108,7 @@
     items: 3,
     dots: true,
     dotsEach: 2,
-    smartSpeed: 1200,
+    smartSpeed: 2000,
     autoHeight: false,
     autoplay: true,
     responsive: {
@@ -128,7 +132,7 @@
     margin: 100,
     items: 6,
     dots: false,
-    smartSpeed: 1200,
+    smartSpeed: 1000,
     autoHeight: false,
     autoplay: true,
     responsive: {
@@ -174,3 +178,23 @@
       );
   });
 })(jQuery);
+
+function active_home() {
+  document.getElementById("li_home").className = "active";
+}
+
+function active_portfolio() {
+  document.getElementById("li_portfolio").className = "active";
+}
+
+function active_services() {
+  document.getElementById("li_services").className = "active";
+}
+
+function active_about() {
+  document.getElementById("li_about").className = "active";
+}
+
+function active_contact() {
+  document.getElementById("li_contact").className = "active";
+}

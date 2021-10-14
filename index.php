@@ -1,39 +1,28 @@
 <?php
-$_GET['title'] = "Inicio";
+if (isset($_GET['lang'])) {
+    if ($_GET['lang'] == 'es') {
+        require("./lang/lang_es.php");
+    } else if ($_GET['lang'] == 'en') {
+        require("./lang/lang_en.php");
+    }
+} else if (isset($_COOKIE['lang'])) {
+    require("./lang/lang_" . $_COOKIE['lang'] . ".php");
+} else {
+    require("./lang/lang_es.php");
+}
+$_GET['title'] = $home;
 require("./header.php");
 ?>
 <!-- Hero Section Begin -->
 <section class="hero">
     <div class="hero__slider owl-carousel">
-        <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+        <div class="hero__item video-foreground">
+            <div class="hero__picture set-bg" data-setbg="img/sample.png"><i></i></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="hero__text">
-                            <span>For website and video editing</span>
-                            <h2>Videographer’s Portfolio</h2>
-                            <a href="#" class="primary-btn">See more about us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="hero__text">
-                            <span>For website and video editing</span>
-                            <h2>Videographer’s Portfolio</h2>
-                            <a href="#" class="primary-btn">See more about us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
-            <div class="container">
-                <div class="row">
+                    <video class="video-container" autoplay muted loop>
+                        <source src="./img/sample.mp4" type="video/mp4" />
+                    </video>
                     <div class="col-lg-6">
                         <div class="hero__text">
                             <span>For website and video editing</span>
@@ -162,6 +151,101 @@ require("./header.php");
 </section>
 <!-- Work Section End -->
 
+<!-- Logo Begin -->
+<div class="logo spad">
+    <div class="container">
+        <div class="logo__carousel owl-carousel">
+            <a href="#" class="logo__item"><img src="img/logo/logo-1.png" alt=""></a>
+            <a href="#" class="logo__item"><img src="img/logo/logo-2.png" alt=""></a>
+            <a href="#" class="logo__item"><img src="img/logo/logo-3.png" alt=""></a>
+            <a href="#" class="logo__item"><img src="img/logo/logo-4.png" alt=""></a>
+            <a href="#" class="logo__item"><img src="img/logo/logo-5.png" alt=""></a>
+            <a href="#" class="logo__item"><img src="img/logo/logo-6.png" alt=""></a>
+        </div>
+    </div>
+</div>
+<!-- Logo End -->
+
+<!-- Call To Action Section Begin -->
+<section class="spad set-bg" data-setbg="img/callto-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="callto__text">
+                    <h2>Fresh Ideas, Fresh Moments Giving Wings to your Stories.</h2>
+                    <p>INC5000, Best places to work 2019</p>
+                    <a href="#">Start your stories</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Call To Action Section End -->
+
+<!-- Team Section Begin -->
+<section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title team__title">
+                    <span>Nice to meet</span>
+                    <h2>OUR Team</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 p-0">
+                <div class="team__item team__item--second set-bg" data-setbg="img/mateus.jpg">
+                    <div class="team__item__text">
+                        <h4>AMANDA STONE</h4>
+                        <p>Videographer</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 p-0">
+                <div class="team__item team__item--third set-bg" data-setbg="img/cristian.jpg">
+                    <div class="team__item__text">
+                        <h4>AMANDA STONE</h4>
+                        <p>Videographer</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 p-0">
+                <div class="team__item team__item--four set-bg" data-setbg="img/tito.jpg">
+                    <div class="team__item__text">
+                        <h4>AMANDA STONE</h4>
+                        <p>Videographer</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 p-0">
+                <div class="team__btn">
+                    <a href="#" class="primary-btn">Meet Our Team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+
 <!-- Counter Section Begin -->
 <section class="counter">
     <div class="container">
@@ -170,7 +254,7 @@ require("./header.php");
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item">
                         <div class="counter__item__text">
-                            <img src="img/icons/ci-1.png" alt="">
+                            <div class="set-bg" data-setbg="img/icons/ci-1.png"><i></i></div>
                             <h2 class="counter_num">230</h2>
                             <p>Compled Projects</p>
                         </div>
@@ -208,203 +292,7 @@ require("./header.php");
     </div>
 </section>
 <!-- Counter Section End -->
-
-<!-- Team Section Begin -->
-<section class="team spad set-bg" data-setbg="img/team-bg.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title team__title">
-                    <span>Nice to meet</span>
-                    <h2>OUR Team</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item set-bg" data-setbg="img/team/team-1.jpg">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--second set-bg" data-setbg="img/team/team-2.jpg">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--third set-bg" data-setbg="img/team/team-3.jpg">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--four set-bg" data-setbg="img/team/team-4.jpg">
-                    <div class="team__item__text">
-                        <h4>AMANDA STONE</h4>
-                        <p>Videographer</p>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 p-0">
-                <div class="team__btn">
-                    <a href="#" class="primary-btn">Meet Our Team</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Team Section End -->
-
-<!-- Latest Blog Section Begin -->
-<section class="latest spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title center-title">
-                    <span>Our Blog</span>
-                    <h2>Blog Update</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="latest__slider owl-carousel">
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog__item latest__item">
-                        <h4>What Makes Users Want to Share a Video on Social Media?</h4>
-                        <ul>
-                            <li>Jan 03, 2020</li>
-                            <li>05 Comment</li>
-                        </ul>
-                        <p>We recently launched a new website for a Vital client and wanted to share some of the
-                            cool features we were able...</p>
-                        <a href="#">Read more <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Latest Blog Section End -->
-
-<!-- Call To Action Section Begin -->
-<section class="callto spad set-bg" data-setbg="img/callto-bg.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="callto__text">
-                    <h2>Fresh Ideas, Fresh Moments Giving Wings to your Stories.</h2>
-                    <p>INC5000, Best places to work 2019</p>
-                    <a href="#">Start your stories</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Call To Action Section End -->
 <?php
 require("footer.php");
+echo '<script type="text/javascript"> active_home(); </script>';
 ?>

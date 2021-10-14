@@ -22,11 +22,19 @@ ErrorDocument 504 /error.php?e=504
 #Alternate Index
 DirectoryIndex index.php
 #Misc
-RewriteRule ^es/?$ index.php?lang=es [NE,QSA]
-RewriteRule ^en/?$ index.php?lang=en [NE,QSA]
-RewriteRule ^hola/?$ index.php?lang=es [NE,QSA]
+RewriteRule ^es/?$ ?lang=es [NE,QSA]
+RewriteRule ^en/?$ ?lang=en [NE,QSA]
+RewriteRule ^inicio/?$ index.php?lang=es [NE,QSA]
 RewriteRule ^home/?$ index.php?lang=en [NE,QSA]
-RewriteRule ^hola/?$ index.php?lang=es [NE,QSA]
+RewriteRule ^portafolio/?$ portfolio.php?lang=es [NE,QSA]
+RewriteRule ^portfolio/?$ portfolio.php?lang=en [NE,QSA]
+RewriteRule ^servicios/?$ services.php?lang=es [NE,QSA]
+RewriteRule ^services/?$ services.php?lang=en [NE,QSA]
+RewriteRule ^equipo/?$ about.php?lang=es [NE,QSA]
+RewriteRule ^team/?$ about.php?lang=en [NE,QSA]
+RewriteRule ^contacto/?$ contact.php?lang=es [NE,QSA]
+RewriteRule ^contact/?$ contact.php?lang=en [NE,QSA]
+
 #ANTISPAM
 #Block proxies almost of all kind. - tested HMA High +KA and did not passed.
 RewriteCond %{HTTP:HTTP_VIA}      !^$ [OR]

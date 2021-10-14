@@ -1,8 +1,18 @@
 <?php
-$_GET['title'] = "Inicio";
+if (isset($_GET['lang'])) {
+    if ($_GET['lang'] == 'es') {
+        require("./lang/lang_es.php");
+    } else if ($_GET['lang'] == 'en') {
+        require("./lang/lang_en.php");
+    }
+} else if (isset($_COOKIE['lang'])) {
+    require("./lang/lang_" . $_COOKIE['lang'] . ".php");
+} else {
+    require("./lang/lang_es.php");
+}
+$_GET['title'] = $services;
 require("./header.php");
 ?>
-<!-- Breadcrumb Begin -->
 <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
     <div class="container">
         <div class="row">
@@ -18,7 +28,6 @@ require("./header.php");
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
 
 <!-- Services Section Begin -->
 <section class="services-page spad">
@@ -89,25 +98,6 @@ require("./header.php");
 </section>
 <!-- Services Section End -->
 
-<!-- Call To Action Section Begin -->
-<section class="callto sp__callto">
-    <div class="container">
-        <div class="callto__services spad set-bg" data-setbg="img/calltos-bg.jpg">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <div class="callto__text">
-                        <h2>CREATE AWESOME VIDEOS WITH WIDEO’S POWERFUL FEATURES</h2>
-                        <p>Wideo combines all the features you need to easily create professional videos and
-                            presentations</p>
-                        <a href="#">Start your stories</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Call To Action Section End -->
-
 <!-- Logo Begin -->
 <div class="logo spad">
     <div class="container">
@@ -122,6 +112,23 @@ require("./header.php");
     </div>
 </div>
 <!-- Logo End -->
+
+<!-- Call To Action Section Begin -->
+<section class="spad set-bg" data-setbg="img/calltos-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="callto__text">
+                    <h2>CREATE AWESOME VIDEOS WITH WIDEO’S POWERFUL FEATURES</h2>
+                    <p>Wideo combines all the features you need to easily create professional videos andpresentations</p>
+                    <a href="#">Start your stories</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Call To Action Section End -->
 <?php
 require("footer.php");
+echo '<script type="text/javascript"> active_services(); </script>';
 ?>

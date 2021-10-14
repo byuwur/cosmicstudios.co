@@ -1,8 +1,18 @@
 <?php
-$_GET['title'] = "Inicio";
+if (isset($_GET['lang'])) {
+    if ($_GET['lang'] == 'es') {
+        require("./lang/lang_es.php");
+    } else if ($_GET['lang'] == 'en') {
+        require("./lang/lang_en.php");
+    }
+} else if (isset($_COOKIE['lang'])) {
+    require("./lang/lang_" . $_COOKIE['lang'] . ".php");
+} else {
+    require("./lang/lang_es.php");
+}
+$_GET['title'] = $portfolio;
 require("./header.php");
 ?>
-<!-- Breadcrumb Begin -->
 <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
     <div class="container">
         <div class="row">
@@ -18,7 +28,6 @@ require("./header.php");
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
 
 <!-- Portfolio Section Begin -->
 <section class="portfolio spad">
@@ -169,4 +178,5 @@ require("./header.php");
 <!-- Portfolio Section End -->
 <?php
 require("footer.php");
+echo '<script type="text/javascript"> active_portfolio(); </script>';
 ?>

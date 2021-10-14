@@ -1,31 +1,18 @@
 <?php
 if (isset($_GET['lang'])) {
-    if ($_GET['lang'] == 'es' || $_GET['lang'] == 'en') {
-        if ($_GET['lang'] == 'es') {
-            $_GET['title'] = "Equipo";
-        } else if ($_GET['lang'] == 'en') {
-            $_GET['title'] = "Team";
-        }
-    } else {
-        $_GET['title'] = "Equipo";
+    if ($_GET['lang'] == 'es') {
+        require("./lang/lang_es.php");
+    } else if ($_GET['lang'] == 'en') {
+        require("./lang/lang_en.php");
     }
 } else if (isset($_COOKIE['lang'])) {
-    if ($_COOKIE['lang'] == 'es' || $_COOKIE['lang'] == 'en') {
-        if ($_COOKIE['lang'] == 'es') {
-            $_GET['title'] = "Equipo";
-        } else if ($_COOKIE['lang' == 'en']) {
-            $_GET['title'] = "Team";
-        }
-    } else {
-        $_GET['title'] = "Equipo";
-    }
+    require("./lang/lang_" . $_COOKIE['lang'] . ".php");
 } else {
-    $_GET['title'] = "Equipo";
+    require("./lang/lang_es.php");
 }
-$_GET['title'] = "Equipo";
+$_GET['title'] = $about;
 require("./header.php");
 ?>
-<!-- Breadcrumb Begin -->
 <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
     <div class="container">
         <div class="row">
@@ -41,7 +28,6 @@ require("./header.php");
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
 
 <!-- About Section Begin -->
 <section class="about spad">
@@ -334,4 +320,5 @@ require("./header.php");
 <!-- Team Section End -->
 <?php
 require("footer.php");
+echo '<script type="text/javascript"> active_about(); </script>';
 ?>
