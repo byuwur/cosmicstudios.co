@@ -97,6 +97,6 @@ require("./header.php");
 </section>
 <!-- Call To Action Section End -->
 <?php
-require("footer.php");
+require("./footer.php");
 echo '<script type="text/javascript"> active_contact(); </script>';
 ?>

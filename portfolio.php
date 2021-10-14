@@ -177,6 +177,6 @@ require("./header.php");
 </section>
 <!-- Portfolio Section End -->
 <?php
-require("footer.php");
+require("./footer.php");
 echo '<script type="text/javascript"> active_portfolio(); </script>';
 ?>
