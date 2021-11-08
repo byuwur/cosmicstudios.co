@@ -13,15 +13,14 @@ if (isset($_GET['lang'])) {
 $_GET['title'] = $portfolio;
 require("./header.php");
 ?>
-<div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
+<div class="breadcrumb-option spad video-foreground">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb__text">
-                    <h2>About us</h2>
+                    <h2><?= $portfolio_title; ?></h2>
                     <div class="breadcrumb__links">
-                        <a href="#">Home</a>
-                        <span>About</span>
+                        <a href="javascript:;"><?= $weare; ?></a><span><?= $portfolio; ?></span>
                     </div>
                 </div>
             </div>
@@ -35,143 +34,36 @@ require("./header.php");
         <div class="row">
             <div class="col-lg-12">
                 <ul class="portfolio__filter">
-                    <li class="active" data-filter="*">All</li>
-                    <li data-filter=".branding">Branding</li>
-                    <li data-filter=".digital-marketing">Digital marketing</li>
-                    <li data-filter=".web">Web</li>
-                    <li data-filter=".photography">Photography</li>
-                    <li data-filter=" .ecommerce">eCommerce</li>
+                    <li data-filter="*" class="active"><?= $cat0; ?></li>
+                    <li data-filter=".cdc"><?= $cat1; ?></li>
+                    <li data-filter=".tv"><?= $cat2; ?></li>
+                    <li data-filter=".institution"><?= $cat3; ?></li>
+                    <li data-filter=".enterprise"><?= $cat4; ?></li>
+                    <li data-filter=" .academy"><?= $cat5; ?></li>
+                    <li data-filter=" .events"><?= $cat6; ?></li>
+                    <li data-filter=" .cultural"><?= $cat7; ?></li>
+                    <li data-filter=" .sports"><?= $cat8; ?></li>
+                    <li data-filter=" .music"><?= $cat9; ?></li>
+                    <li data-filter=" .tourism"><?= $cat10; ?></li>
+                    <li data-filter=" .politics"><?= $cat11; ?></li>
                 </ul>
             </div>
         </div>
         <div class="row portfolio__gallery">
-            <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
+            <div class="col-lg-4 col-md-6 col-sm-6 mix cdc">
                 <div class="portfolio__item">
                     <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-1.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        <a href="https://www.youtube.com/watch?v=iSpKyHnJHwY" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                     </div>
                     <div class="portfolio__item__text">
                         <h4>VIP Auto Tires & Service</h4>
                         <ul>
                             <li>eCommerce</li>
-                            <li>Magento</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mix digital-marketing">
-                <div class="portfolio__item">
-                    <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-2.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                    <div class="portfolio__item__text">
-                        <h4>VIP Auto Tires & Service</h4>
-                        <span>Photography</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mix web">
-                <div class="portfolio__item">
-                    <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-3.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                    <div class="portfolio__item__text">
-                        <h4>VIP Auto Tires & Service</h4>
-                        <ul>
-                            <li>eCommerce</li>
-                            <li>Magento</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mix photography">
-                <div class="portfolio__item">
-                    <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-4.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                    <div class="portfolio__item__text">
-                        <h4>VIP Auto Tires & Service</h4>
-                        <ul>
-                            <li>eCommerce</li>
-                            <li>Magento</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mix ecommerce">
-                <div class="portfolio__item">
-                    <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-5.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                    <div class="portfolio__item__text">
-                        <h4>VIP Auto Tires & Service</h4>
-                        <span>Photography</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
-                <div class="portfolio__item">
-                    <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-6.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                    <div class="portfolio__item__text">
-                        <h4>VIP Auto Tires & Service</h4>
-                        <ul>
-                            <li>eCommerce</li>
-                            <li>Magento</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mix web">
-                <div class="portfolio__item">
-                    <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-7.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                    <div class="portfolio__item__text">
-                        <h4>VIP Auto Tires & Service</h4>
-                        <ul>
-                            <li>eCommerce</li>
-                            <li>Magento</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mix photography">
-                <div class="portfolio__item">
-                    <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-8.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                    <div class="portfolio__item__text">
-                        <h4>VIP Auto Tires & Service</h4>
-                        <span>Photography</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mix ecommerce">
-                <div class="portfolio__item">
-                    <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/portfolio-9.jpg">
-                        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                    <div class="portfolio__item__text">
-                        <h4>VIP Auto Tires & Service</h4>
-                        <ul>
-                            <li>eCommerce</li>
-                            <li>Magento</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="pagination__option">
-                    <a href="#" class="arrow__pagination left__arrow"><span class="arrow_left"></span> Prev</a>
-                    <a href="#" class="number__pagination">1</a>
-                    <a href="#" class="number__pagination">2</a>
-                    <a href="#" class="arrow__pagination right__arrow">Next <span class="arrow_right"></span></a>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>

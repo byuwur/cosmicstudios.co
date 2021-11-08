@@ -31,13 +31,14 @@ if (isset($_GET['title'])) {
     $title = "COSMIC Studios";
 }
 ?>
+
 <head>
     <meta charset="utf-8">
     <title><?= $title; ?></title>
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="COSMIC Studios" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://cosmicstudios.co/img/logo.jpg" />
+    <meta property="og:image" content="http://cosmicstudios.co/img/logo_circle.png" />
     <meta property="og:url" content="http://cosmicstudios.co/" />
     <meta property="og:site_name" content="cosmicstudios.co" />
     <meta property="og:description" content="Empresa productora de medios y radiodifusión. Productora de fotografía y vídeo profesional." />
@@ -65,6 +66,7 @@ if (isset($_GET['title'])) {
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
+
 <body>
     <div class="loading">
         <div class="load-circle-back"></div>
@@ -75,7 +77,9 @@ if (isset($_GET['title'])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-6">
-                    <a href="./"><div class="header__logo"><i></i></div></a>
+                    <a href="./">
+                        <div class="header__logo"><i></i></div>
+                    </a>
                 </div>
                 <div class="col-lg-10">
                     <div class="header__nav__option">
@@ -93,8 +97,9 @@ if (isset($_GET['title'])) {
                             </ul>
                         </nav>
                         <div class="header__nav__social">
-                            <a href="http://facebook.com/cosmicstudios.co"><i class="fa fa-facebook"></i></a>
-                            <a href="http://instagram.com/co.cosmicstudios"><i class="fa fa-instagram"></i></a>
+                            <a href="<?= $youtube; ?>" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="<?= $instagram; ?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="<?= $facebook; ?>" target="_blank"><i class="fab fa-facebook"></i></a>
                             <a href="es" title="Español"><img src="img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> ES</a>
                             <a href="en" title="English"><img src="img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> EN</a>
                         </div>
@@ -104,3 +109,7 @@ if (isset($_GET['title'])) {
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
+    <video class="video-container" muted loop>
+        <source src="./img/bg.mp4" type="video/mp4" />
+        <source src="./img/bg.webm" type="video/webm" />
+    </video>

@@ -3,19 +3,44 @@ require("./header.php");
 ?>
 <!-- Hero Section Begin -->
 <section class="hero">
-    <div class="hero__slider owl-carousel">
-        <div class="hero__item video-foreground">
-            <div class="hero__picture set-bg" data-setbg="img/sample.png"><i></i></div>
+    <div class="hero__slider owl-carousel video-foreground">
+        <div class="hero__item">
+            <div class="hero__picture set-bg" data-setbg="img/sample.png"></div>
             <div class="container">
                 <div class="row">
-                    <video class="video-container" autoplay muted loop>
-                        <source src="./img/sample.mp4" type="video/mp4" />
-                    </video>
                     <div class="col-lg-6">
                         <div class="hero__text">
-                            <span>For website and video editing</span>
-                            <h2>Videographer’s Portfolio</h2>
-                            <a href="#" class="primary-btn">See more about us</a>
+                            <span><?= $carrousel1_sub; ?></span>
+                            <h2><?= $carrousel1_title; ?></h2>
+                            <a href="<?= $_portfolio; ?>" class="primary-btn"><?= $carrousel1_link; ?></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__item">
+            <div class="hero__picture set-bg" data-setbg="img/sample.png"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="hero__text">
+                            <span><?= $carrousel2_sub; ?></span>
+                            <h2><?= $carrousel2_title; ?></h2>
+                            <a href="<?= $_services; ?>" class="primary-btn"><?= $carrousel2_link; ?></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__item">
+            <div class="hero__picture set-bg" data-setbg="img/sample.png"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="hero__text">
+                            <span><?= $carrousel3_sub; ?></span>
+                            <h2><?= $carrousel3_title; ?></h2>
+                            <a href="<?= $_about; ?>" class="primary-btn"><?= $carrousel3_link; ?></a>
                         </div>
                     </div>
                 </div>
@@ -62,26 +87,6 @@ require("./header.php");
                                 post production services can put the finishing touches.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="services__item">
-                            <div class="services__item__icon">
-                                <img src="img/icons/si-3.png" alt="">
-                            </div>
-                            <h4>Video distribution</h4>
-                            <p>Whether you’re halfway through the editing process, or you haven’t even started, our
-                                post production services can put the finishing touches.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="services__item">
-                            <div class="services__item__icon">
-                                <img src="img/icons/si-4.png" alt="">
-                            </div>
-                            <h4>Video hosting</h4>
-                            <p>Whether you’re halfway through the editing process, or you haven’t even started, our
-                                post production services can put the finishing touches.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -103,11 +108,15 @@ require("./header.php");
                 </ul>
             </div>
         </div>
-        <div class="work__item small__item set-bg" data-setbg="img/work/work-2.jpg">
+        <div class="work__item wide__item set-bg" data-setbg="img/work/work-1.jpg">
             <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item small__item set-bg" data-setbg="img/work/work-3.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            <div class="work__item__hover">
+                <h4>VIP Auto Tires & Service</h4>
+                <ul>
+                    <li>eCommerce</li>
+                    <li>Magento</li>
+                </ul>
+            </div>
         </div>
         <div class="work__item large__item set-bg" data-setbg="img/work/work-4.jpg">
             <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
@@ -119,13 +128,17 @@ require("./header.php");
                 </ul>
             </div>
         </div>
-        <div class="work__item small__item set-bg" data-setbg="img/work/work-5.jpg">
+        <div class="work__item wide__item set-bg" data-setbg="img/work/work-1.jpg">
             <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            <div class="work__item__hover">
+                <h4>VIP Auto Tires & Service</h4>
+                <ul>
+                    <li>eCommerce</li>
+                    <li>Magento</li>
+                </ul>
+            </div>
         </div>
-        <div class="work__item small__item set-bg" data-setbg="img/work/work-6.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-        </div>
-        <div class="work__item wide__item set-bg" data-setbg="img/work/work-7.jpg">
+        <div class="work__item wide__item set-bg" data-setbg="img/work/work-1.jpg">
             <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
             <div class="work__item__hover">
                 <h4>VIP Auto Tires & Service</h4>

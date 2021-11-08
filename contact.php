@@ -13,15 +13,14 @@ if (isset($_GET['lang'])) {
 $_GET['title'] = $contact;
 require("./header.php");
 ?>
-<div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
+<div class="breadcrumb-option spad video-foreground">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb__text">
-                    <h2>Contact us</h2>
+                <h2><?= $contact_title; ?></h2>
                     <div class="breadcrumb__links">
-                        <a href="#">Home</a>
-                        <span>Contact</span>
+                        <a href="javascript:;"><?= $weare; ?></a><span><?= $contact; ?></span>
                     </div>
                 </div>
             </div>
@@ -77,7 +76,7 @@ require("./header.php");
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="contact__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.35330665071!2d-74.889348684749!3d4.150743947335077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3ed34df51acbb1%3A0xbdb77d4ff326b7a4!2sCosmic%20Studios!5e0!3m2!1ses-419!2sco!4v1634200215224!5m2!1ses-419!2sco" height="480" style="border:0;"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.35330665071!2d-74.889348684749!3d4.150743947335077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3ed34df51acbb1%3A0xbdb77d4ff326b7a4!2sCosmic%20Studios!5e0!3m2!1ses-419!2sco!4v1634200215224!5m2!1ses-419!2sco" height="480" style="border:0;filter:invert(88%);"></iframe>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">

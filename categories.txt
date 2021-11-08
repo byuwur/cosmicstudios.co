@@ -1,0 +1,128 @@
+[CDC]
+Mateus byUwUr
+Pamis
+Los Manipuliadores
+ViejoFlow
+
+[TELEVISIÓN]
+Espinal 6AM
+Al Rojo Vivo
+Don Tito: el salsero de la mata
+El Rockolazo
+Usted qué opina
+En Contexto, Espinal
+Despertar al día (2020-B)
+Libro Abierto
+Noti Indio
+De Frente (¿?)
+
+[INSTITUCIONAL]
+ITFIP
+UniLatina
+Tapa Roja
+Fundación Furidance
+Fundación Recuco
+Fundación Por Amor al Tolima
+Concejo de El Espinal
+EAAA ESP. Espinal
+EspuCoello ESP. Coello
+CadeVIP
+NASSA
+Goliat SAS
+CC Sur y Oriente Tolima
+
+[EMPRESARIAL]
+Ocobo Espinal SAS
+Waylla
+Estética y Salud Espinal
+Mykonos
+La 4ta Liquor Store
+Orígenes
+BMP Producciones
+BuenaMiga
+
+[ACADEMIA]
+ITFIP
+UCC Espinal
+Col. Nstra. Sra. del Rosario
+Gimnasio Pedagógico Nova Estrella
+Liceo Santo Domingo Savio
+Liceo María José
+Colegio San Isidoro
+Colegio María Montessori
+
+[EVENTOS]
+Matrimonios
+Graduaciones
+Conciertos
+Quince años
+Cumpleaños
+Primeras Comuniones
+Confirmaciones
+Bautizos
+
+[CULTURAL]
+Mexican Circus Hnos. Ancor
+Circo Royal de Chavelo y Papijunior
+Fundación Furidance
+Underrap Espinal
+Viernes Cultural ITFIP
+Fundación Recuco
+Fundación Por Amor al Tolima
+Libro Abierto
+Alcaldía de El Espinal
+Noti Indio
+
+[DEPORTES]
+CD. ITFIP
+FitStage
+Rehobot Box
+
+[MÚSICA]
+Underrap Espinal
+BMP Producciones
+Fundación Por Amor al Tolima
+Viernes Cultural ITFIP
+
+[TURISMO]
+Galería de Turismo
+
+[POLÍTICA]
+Daniela Olivar (Concejo)
+Rosmery Martínez (Gobernación)
+
+
+[UNUSED CODE]
+        <div class="work__item wide__item set-bg" data-setbg="img/work/work-1.jpg">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            <div class="work__item__hover">
+                <h4>VIP Auto Tires & Service</h4>
+                <ul>
+                    <li>eCommerce</li>
+                    <li>Magento</li>
+                </ul>
+            </div>
+        </div>
+        <div class="work__item small__item set-bg" data-setbg="img/work/work-2.jpg">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+        </div>
+        <div class="work__item large__item set-bg" data-setbg="img/work/work-4.jpg">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            <div class="work__item__hover">
+                <h4>VIP Auto Tires & Service</h4>
+                <ul>
+                    <li>eCommerce</li>
+                    <li>Magento</li>
+                </ul>
+            </div>
+        </div>
+        <div class="work__item wide__item set-bg" data-setbg="img/work/work-7.jpg">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            <div class="work__item__hover">
+                <h4>VIP Auto Tires & Service</h4>
+                <ul>
+                    <li>eCommerce</li>
+                    <li>Magento</li>
+                </ul>
+            </div>
+        </div>

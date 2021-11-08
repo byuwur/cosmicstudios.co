@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title team__title">
-                    <span>Nice to meet</span>
-                    <h2>OUR Team</h2>
+                    <span><?= $pleasure; ?></span>
+                    <h2><?= $weare; ?></h2>
                 </div>
             </div>
         </div>
@@ -13,13 +13,15 @@
             <div class="col-lg-4 col-md-6 col-sm-6 p-0">
                 <div class="team__item team__item--second set-bg" data-setbg="img/mateus.jpg">
                     <div class="team__item__text">
-                        <h4>NAME LESS</h4>
-                        <p>Videographer</p>
+                        <h4>MATEUS ANDRÉS</h4>
+                        <a href="<?= $byuwur_youtube; ?>" target="_blank">
+                            <p><?= $byuwur; ?></p>
+                        </a>
                         <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="<?= $byuwur_youtube; ?>" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="<?= $byuwur_instagram; ?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="<?= $byuwur_facebook; ?>" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="<?= $byuwur_linkedin; ?>" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -27,13 +29,13 @@
             <div class="col-lg-4 col-md-6 col-sm-6 p-0">
                 <div class="team__item team__item--third set-bg" data-setbg="img/cristian.jpg">
                     <div class="team__item__text">
-                        <h4>NAME LESS</h4>
-                        <p>Videographer</p>
+                        <h4>CRISTIAN PARRA</h4>
+                        <a href="<?= $crisprodu_instagram; ?>" target="_blank">
+                            <p><?= $crisprodu; ?></p>
+                        </a>
                         <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="<?= $crisprodu_instagram; ?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="<?= $crisprodu_facebook; ?>" target="_blank"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
@@ -41,20 +43,20 @@
             <div class="col-lg-4 col-md-6 col-sm-6 p-0">
                 <div class="team__item team__item--four set-bg" data-setbg="img/tito.jpg">
                     <div class="team__item__text">
-                        <h4>NAME LESS</h4>
-                        <p>Videographer</p>
+                        <h4>TITO BOCANEGRA</h4>
+                        <a href="<?= $eltitogs_instagram; ?>" target="_blank">
+                            <p><?= $eltitogs; ?></p>
+                        </a>
                         <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="<?= $eltitogs_instagram; ?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="<?= $eltitogs_facebook; ?>" target="_blank"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-12 p-0">
                 <div class="team__btn">
-                    <a href="#" class="primary-btn">Meet Our Team</a>
+                    <a href="#" target="_blank" class="primary-btn"><?= $meet; ?></a>
                 </div>
             </div>
         </div>
@@ -69,36 +71,36 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item">
                         <div class="counter__item__text">
-                            <div class="set-bg" data-setbg="img/icons/ci-1.png"><i></i></div>
-                            <h2 class="counter_num">230</h2>
-                            <p>Compled Projects</p>
+                            <i class="fas fa-check-circle counter_icon"></i>
+                            <h2 class="counter_num">0</h2>
+                            <p><?= $counter1; ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item second__item">
                         <div class="counter__item__text">
-                            <img src="img/icons/ci-2.png" alt="">
-                            <h2 class="counter_num">1068</h2>
-                            <p>Happy clients</p>
+                        <i class="fas fa-thumbs-up counter_icon"></i>
+                            <h2 class="counter_num">0</h2>
+                            <p><?= $counter2; ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item third__item">
                         <div class="counter__item__text">
-                            <img src="img/icons/ci-3.png" alt="">
-                            <h2 class="counter_num">230</h2>
-                            <p>Perspective clients</p>
+                        <i class="fas fa-user-friends counter_icon"></i>
+                            <h2 class="counter_num">0</h2>
+                            <p><?= $counter3; ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__item four__item">
                         <div class="counter__item__text">
-                            <img src="img/icons/ci-4.png" alt="">
-                            <h2 class="counter_num">230</h2>
-                            <p>Compled Projects</p>
+                        <i class="fas fa-clipboard-list counter_icon"></i>
+                            <h2 class="counter_num">0</h2>
+                            <p><?= $counter4; ?></p>
                         </div>
                     </div>
                 </div>

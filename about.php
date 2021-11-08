@@ -13,15 +13,14 @@ if (isset($_GET['lang'])) {
 $_GET['title'] = $about;
 require("./header.php");
 ?>
-<div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
+<div class="breadcrumb-option spad video-foreground">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb__text">
-                    <h2>About us</h2>
+                    <h2><?= $about_title; ?></h2>
                     <div class="breadcrumb__links">
-                        <a href="#">Home</a>
-                        <span>About</span>
+                        <a href="javascript:;"><?= $weare; ?></a><span><?= $about; ?></span>
                     </div>
                 </div>
             </div>
@@ -37,15 +36,15 @@ require("./header.php");
                 <div class="about__pic">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="about__pic__item about__pic__item--large set-bg" data-setbg="img/about/about-1.jpg"></div>
+                            <div class="about__pic__item about__pic__item--large set-bg" data-setbg="img/about-1.jpg"></div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="about__pic__item set-bg" data-setbg="img/about/about-2.jpg"></div>
+                                    <div class="about__pic__item set-bg" data-setbg="img/about-2.jpg"></div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <div class="about__pic__item set-bg" data-setbg="img/about/about-3.jpg"></div>
+                                    <div class="about__pic__item set-bg" data-setbg="img/about-3.jpg"></div>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +61,7 @@ require("./header.php");
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="services__item">
                                 <div class="services__item__icon">
-                                    <img src="img/icons/si-3.png" alt="">
+                                    <i class="fas fa-photo-video services_icon"></i>
                                 </div>
                                 <h4>Video distribution</h4>
                                 <p>Whether you’re halfway through the editing process, or you.</p>
@@ -71,7 +70,7 @@ require("./header.php");
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="services__item">
                                 <div class="services__item__icon">
-                                    <img src="img/icons/si-4.png" alt="">
+                                    <i class="fas fa-film services_icon"></i>
                                 </div>
                                 <h4>Video hosting</h4>
                                 <p>Whether you’re halfway through the editing process, or you.</p>
@@ -96,8 +95,8 @@ require("./header.php");
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title center-title">
-                    <span>Loved By Clients</span>
-                    <h2>What clients say?</h2>
+                    <span><?= $loved; ?></span>
+                    <h2><?= $says; ?></h2>
                 </div>
             </div>
         </div>
@@ -106,16 +105,15 @@ require("./header.php");
                 <div class="col-lg-4">
                     <div class="testimonial__item">
                         <div class="testimonial__text">
-                            <p>Delivers such a great service that it can benefit all kinds of people from any number
-                                of industries.</p>
+                            <p><?= $test_text_0; ?></p>
                         </div>
                         <div class="testimonial__author">
                             <div class="testimonial__author__pic">
-                                <img src="img/testimonial/ta-1.jpg" alt="">
+                                <img src="img/mateus.old.jpg" alt="">
                             </div>
                             <div class="testimonial__author__text">
-                                <h5>Krista Attorn</h5>
-                                <span>Web Designer</span>
+                                <h5><?= $test_name_0; ?></h5>
+                                <span><?= $test_charge_0; ?></span>
                             </div>
                         </div>
                     </div>
@@ -123,16 +121,15 @@ require("./header.php");
                 <div class="col-lg-4">
                     <div class="testimonial__item">
                         <div class="testimonial__text">
-                            <p>Videographer delivers such a great service that it can benefit all kinds of people
-                                from any number.</p>
+                            <p><?= $test_text_1; ?></p>
                         </div>
                         <div class="testimonial__author">
                             <div class="testimonial__author__pic">
-                                <img src="img/testimonial/ta-2.jpg" alt="">
+                                <img src="img/cristian.old.jpg" alt="">
                             </div>
                             <div class="testimonial__author__text">
-                                <h5>Krista Attorn</h5>
-                                <span>Web Designer</span>
+                                <h5><?= $test_name_1; ?></h5>
+                                <span><?= $test_charge_1; ?></span>
                             </div>
                         </div>
                     </div>
@@ -140,50 +137,15 @@ require("./header.php");
                 <div class="col-lg-4">
                     <div class="testimonial__item">
                         <div class="testimonial__text">
-                            <p>Videographer delivers such a great service that it can benefit all kinds of people
-                                from any number.</p>
+                            <p><?= $test_text_2; ?></p>
                         </div>
                         <div class="testimonial__author">
                             <div class="testimonial__author__pic">
-                                <img src="img/testimonial/ta-3.jpg" alt="">
+                                <img src="img/tito.old.jpg" alt="">
                             </div>
                             <div class="testimonial__author__text">
-                                <h5>Krista Attorn</h5>
-                                <span>Web Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial__item">
-                        <div class="testimonial__text">
-                            <p>Delivers such a great service that it can benefit all kinds of people from any number
-                                of industries.</p>
-                        </div>
-                        <div class="testimonial__author">
-                            <div class="testimonial__author__pic">
-                                <img src="img/testimonial/ta-1.jpg" alt="">
-                            </div>
-                            <div class="testimonial__author__text">
-                                <h5>Krista Attorn</h5>
-                                <span>Web Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial__item">
-                        <div class="testimonial__text">
-                            <p>Videographer delivers such a great service that it can benefit all kinds of people
-                                from any number.</p>
-                        </div>
-                        <div class="testimonial__author">
-                            <div class="testimonial__author__pic">
-                                <img src="img/testimonial/ta-2.jpg" alt="">
-                            </div>
-                            <div class="testimonial__author__text">
-                                <h5>Krista Attorn</h5>
-                                <span>Web Designer</span>
+                                <h5><?= $test_name_2; ?></h5>
+                                <span><?= $test_charge_2; ?></span>
                             </div>
                         </div>
                     </div>

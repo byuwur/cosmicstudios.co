@@ -34,7 +34,6 @@ RewriteRule ^equipo/?$ about.php?lang=es [NE,QSA]
 RewriteRule ^team/?$ about.php?lang=en [NE,QSA]
 RewriteRule ^contacto/?$ contact.php?lang=es [NE,QSA]
 RewriteRule ^contact/?$ contact.php?lang=en [NE,QSA]
-
 #ANTISPAM
 #Block proxies almost of all kind. - tested HMA High +KA and did not passed.
 RewriteCond %{HTTP:HTTP_VIA}      !^$ [OR]
