@@ -3,15 +3,15 @@
         <div class="footer__top">
             <div class="row">
                 <div class="col-4">
-                    <a href="./">
+                    <a href="javascript:;">
                         <div class="footer__top__logo"><i></i></div>
                     </a>
                 </div>
                 <div class="col-8">
                     <div class="footer__top__social">
-                        <a href="<?= $youtube; ?>" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="<?= $instagram; ?>" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="<?= $facebook; ?>" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <?php foreach ($cosmic_link as $i => $link) { ?>
+                            <a href="<?= $link; ?>" target="_blank"><i class="<?= $cosmic_link_icon[$i]; ?>"></i></a>
+                        <?php } ?>
                         <a href="es" title="Español"><img src="img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
                         <a href="en" title="English"><img src="img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
                     </div>
@@ -23,27 +23,27 @@
                 <div class="col-md-5 col-sm-6">
                     <div class="footer__option__item">
                         <h5><?= $weare; ?></h5>
-                        <p><?= $aboutus_short; ?></p>
+                        <p><?= $about_short; ?></p>
                         <a href="<?= $_about; ?>" class="read__more"><?= $know; ?> <span class="arrow_right"></span></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-3">
                     <div class="footer__option__item">
-                        <h5><?= $about_title_short; ?></h5>
+                        <h5><?= $footer_about; ?></h5>
                         <ul>
-                            <li><a href="<?= $_about; ?>"><?= $footer_about_item1; ?></a></li>
-                            <li><a href="<?= $_contact; ?>"><?= $footer_about_item2; ?></a></li>
-                            <li><a href="<?= $_contact; ?>"><?= $footer_about_item3; ?></a></li>
+                            <?php foreach ($footer_about_item as $i => $item) { ?>
+                                <li><a href="<?= $footer_about_link[$i]; ?>"><?= $item; ?></a></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="footer__option__item">
-                        <h5><?= $portfolio_title_short; ?></h5>
+                        <h5><?= $footer_portfolio; ?></h5>
                         <ul>
-                            <li><a href="<?= $_portfolio; ?>"><?= $footer_portfolio_item1; ?></a></li>
-                            <li><a href="<?= $_portfolio; ?>"><?= $footer_portfolio_item2; ?></a></li>
-                            <li><a href="<?= $_services; ?>"><?= $footer_portfolio_item3; ?></a></li>
+                            <?php foreach ($footer_portfolio_item as $i => $item) { ?>
+                                <li><a href="<?= $footer_portfolio_link[$i]; ?>"><?= $item; ?></a></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>

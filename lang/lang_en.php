@@ -1,6 +1,6 @@
 <?php
-//TEXTOS EN ESPAÑOL
-//Use HTML para esquematizar
+//ENGLISH TEXTS
+//Use HTML if necessary
 $year = date("Y");
 //Links
 $youtube = "https://www.youtube.com/channel/UCeC2bcVxtPmHida8glgOQPQ";
@@ -20,7 +20,7 @@ $eltitogs_facebook = "https://www.facebook.com/tasantos";
 //Misc
 $weare = "We're Cosmic";
 $mateus_name = "Mateus [byUwUr]";
-$mateus_link = "https://somosmnm.000webhostapp.com/mateus";
+$mateus_link = "https://byuwur.net";
 $footer_text = "&copy; $year COSMIC Studios | Made with <i class='fas fa-heart'></i> by <a href='$mateus_link' target='_blank'>$mateus_name</a> | <a href='https://colorlib.com' target='_blank'>Colorlib</a>";
 $load = "<strong>Loading...</strong><br><br>Still loading? <a href='javascript:location.reload();'>Try reloading.</a>";
 $know = "Know more";

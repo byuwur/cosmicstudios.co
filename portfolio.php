@@ -1,16 +1,5 @@
 <?php
-if (isset($_GET['lang'])) {
-    if ($_GET['lang'] == 'es') {
-        require("./lang/lang_es.php");
-    } else if ($_GET['lang'] == 'en') {
-        require("./lang/lang_en.php");
-    }
-} else if (isset($_COOKIE['lang'])) {
-    require("./lang/lang_" . $_COOKIE['lang'] . ".php");
-} else {
-    require("./lang/lang_es.php");
-}
-$_GET['title'] = $portfolio;
+$_GET['title'] = 3;
 require("./header.php");
 ?>
 <div class="breadcrumb-option spad video-foreground">
@@ -39,13 +28,13 @@ require("./header.php");
                     <li data-filter=".tv"><?= $cat2; ?></li>
                     <li data-filter=".institution"><?= $cat3; ?></li>
                     <li data-filter=".enterprise"><?= $cat4; ?></li>
-                    <li data-filter=" .academy"><?= $cat5; ?></li>
-                    <li data-filter=" .events"><?= $cat6; ?></li>
-                    <li data-filter=" .cultural"><?= $cat7; ?></li>
-                    <li data-filter=" .sports"><?= $cat8; ?></li>
-                    <li data-filter=" .music"><?= $cat9; ?></li>
-                    <li data-filter=" .tourism"><?= $cat10; ?></li>
-                    <li data-filter=" .politics"><?= $cat11; ?></li>
+                    <li data-filter=".academy"><?= $cat5; ?></li>
+                    <li data-filter=".events"><?= $cat6; ?></li>
+                    <li data-filter=".cultural"><?= $cat7; ?></li>
+                    <li data-filter=".sports"><?= $cat8; ?></li>
+                    <li data-filter=".music"><?= $cat9; ?></li>
+                    <li data-filter=".tourism"><?= $cat10; ?></li>
+                    <li data-filter=".politics"><?= $cat11; ?></li>
                 </ul>
             </div>
         </div>

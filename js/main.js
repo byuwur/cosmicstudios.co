@@ -8,10 +8,10 @@
     $(".load-circle-back").delay(500).fadeOut();
     $(".load-circle-fore").delay(500).fadeOut();
     $(".load-text").delay(500).fadeOut();
-    $(".loading").delay(1000).fadeOut();
-    $(".loading").delay(1000).queue(function () {
-        $(this).remove();
-      });
+    $(".loading").delay(500).fadeOut();
+    $(".loading").delay(500).queue(function () {
+      $(this).remove();
+    });
     /*------------------
             Portfolio filter
         --------------------*/
@@ -41,16 +41,16 @@
   });
 
   /*------------------
-		Navigation
-	--------------------*/
+    Navigation
+  --------------------*/
   $(".mobile-menu").slicknav({
     prependTo: "#mobile-menu-wrap",
     allowParentLinks: true,
   });
 
   /*------------------
-		Hero Slider
-	--------------------*/
+    Hero Slider
+  --------------------*/
   $(".hero__slider").owlCarousel({
     loop: true,
     dots: true,

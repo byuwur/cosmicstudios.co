@@ -1,16 +1,5 @@
 <?php
-if (isset($_GET['lang'])) {
-    if ($_GET['lang'] == 'es') {
-        require("./lang/lang_es.php");
-    } else if ($_GET['lang'] == 'en') {
-        require("./lang/lang_en.php");
-    }
-} else if (isset($_COOKIE['lang'])) {
-    require("./lang/lang_" . $_COOKIE['lang'] . ".php");
-} else {
-    require("./lang/lang_es.php");
-}
-$_GET['title'] = $services;
+$_GET['title'] = 2;
 require("./header.php");
 ?>
 <div class="breadcrumb-option spad video-foreground">
