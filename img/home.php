@@ -1,3 +1,4 @@
+<?php require_once "../_var.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,4 +10,4 @@
     Sorry, you shouldn't be here.
 </body>
 </html>
-<?php header("Location:../"); ?>
+<?php header("Location:" . $to_home); ?>

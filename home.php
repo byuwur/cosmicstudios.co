@@ -1,73 +1,47 @@
 <?php
-require("./header.php");
+require_once "./header.php";
 ?>
 <!-- Hero Section Begin -->
-<section class="hero">
-    <div class="hero__slider owl-carousel video-foreground">
-        <?php foreach ($carousel_title as $i => $title) { ?>
-            <div class="hero__item">
-                <div class="hero__picture set-bg" data-setbg=""></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="hero__text">
-                                <span><?= $carousel_sub[$i]; ?></span>
-                                <h2><?= $title; ?></h2>
-                                <a href="<?= $carousel_link[$i]; ?>" class="primary-btn"><?= $carousel_link_text[$i]; ?></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section class="hero__slider owl-carousel video-foreground">
+    <?php foreach ($carousel_title as $i => $title) { ?>
+        <div class="hero__item container">
+            <!--div class="hero__picture set-bg" data-setbg=""></div-->
+            <div class="col-lg-6 hero__text">
+                <span><?= $carousel_sub[$i]; ?></span>
+                <h2><?= $title; ?></h2>
+                <a href="<?= $carousel_link[$i]; ?>" class="primary-btn"><?= $carousel_link_text[$i]; ?></a>
             </div>
-        <?php } ?>
-    </div>
+        </div>
+    <?php } ?>
 </section>
 <!-- Hero Section End -->
-
 <!-- Services Section Begin -->
 <section class="services spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <div class="services__title">
-                    <div class="section-title">
-                        <span>Our services</span>
-                        <h2>What We do?</h2>
-                    </div>
-                    <p>If you hire a videographer of our team you will get a video professional to make a custom
-                        video for your business and, once the project is over.</p>
-                    <a href="#" class="primary-btn">View all services</a>
+            <div class="row col-12 mb-4">
+                <div class="col-md-4 section-title">
+                    <span><?= $services_title; ?></span>
+                    <h2><?= $services_subtitle; ?></h2>
+                </div>
+                <div class="col-md-8">
+                    <p><?= $services_short; ?></p>
+                    <a href="<?= $services; ?>" class="primary-btn"><?= $meetservices; ?></a>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="services__item">
-                            <div class="services__item__icon">
-                                <img src="img/icons/si-1.png" alt="">
-                            </div>
-                            <h4>Motion graphics</h4>
-                            <p>Whether you’re halfway through the editing process, or you haven’t even started, our
-                                post production services can put the finishing touches.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="services__item">
-                            <div class="services__item__icon">
-                                <img src="img/icons/si-2.png" alt="">
-                            </div>
-                            <h4>Scriptwriting and editing</h4>
-                            <p>Whether you’re halfway through the editing process, or you haven’t even started, our
-                                post production services can put the finishing touches.</p>
-                        </div>
-                    </div>
+            <?php for ($i = 0; $i < 3; $i++) { ?>
+                <div class="services__item col-md-4">
+                    <span class="services__item__icon"><i class="<?= $service_icon[$i]; ?> services_icon"></i></span>
+                    <h4><?= $service_title[$i]; ?></h4>
+                    <p><?= $service_desc[$i]; ?></p>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </section>
 <!-- Services Section End -->
 
+<!-- TODO: -->
 <!-- Work Section Begin -->
 <section class="work">
     <div class="work__gallery">
@@ -82,52 +56,14 @@ require("./header.php");
                 </ul>
             </div>
         </div>
-        <div class="work__item wide__item set-bg" data-setbg="img/work/work-1.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
-        <div class="work__item large__item set-bg" data-setbg="img/work/work-4.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
-        <div class="work__item wide__item set-bg" data-setbg="img/work/work-1.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
-        <div class="work__item wide__item set-bg" data-setbg="img/work/work-1.jpg">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-            <div class="work__item__hover">
-                <h4>VIP Auto Tires & Service</h4>
-                <ul>
-                    <li>eCommerce</li>
-                    <li>Magento</li>
-                </ul>
-            </div>
-        </div>
     </div>
 </section>
 <!-- Work Section End -->
 <?php
-require("./extra.services.php");
-require("./extra.about.php");
-require("./footer.php");
-echo '<script type="text/javascript"> active_home(); </script>';
+require_once $to_home . "extra.services.php";
+require_once $to_home . "extra.about.php";
+require_once $to_home . "footer.php";
 ?>
+<script>
+    $(document).ready(() => active_home());
+</script>

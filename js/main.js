@@ -1,5 +1,9 @@
 "use strict";
-
+const active_home = () => $("#li_home").addClass("active");
+const active_portfolio = () => $("#li_portfolio").addClass("active");
+const active_services = () => $("#li_services").addClass("active");
+const active_about = () => $("#li_about").addClass("active");
+const active_contact = () => $("#li_contact").addClass("active");
 (function ($) {
   /*------------------
         Preloader
@@ -59,7 +63,7 @@
     animateIn: "fadeIn",
     items: 1,
     margin: 0,
-    smartSpeed: 3000,
+    smartSpeed: 6000,
     autoHeight: false,
     autoplay: true,
   });
@@ -83,7 +87,7 @@
     items: 3,
     dots: true,
     dotsEach: 2,
-    smartSpeed: 2000,
+    smartSpeed: 3000,
     autoHeight: false,
     autoplay: true,
     responsive: {
@@ -108,7 +112,7 @@
     items: 3,
     dots: true,
     dotsEach: 2,
-    smartSpeed: 2000,
+    smartSpeed: 3000,
     autoHeight: false,
     autoplay: true,
     responsive: {
@@ -161,40 +165,10 @@
   /*------------------
         Counter
     --------------------*/
-  $(".counter_num").each(function () {
-    $(this)
-      .prop("Counter", 0)
-      .animate(
-        {
-          Counter: $(this).text(),
-        },
-        {
-          duration: 4000,
-          easing: "swing",
-          step: function (now) {
-            $(this).text(Math.ceil(now));
-          },
-        }
+  $(".counter__item__text h2").each(function () {
+      $(this).prop("Counter", 0).animate(
+        { Counter: $(this).text() },
+        { duration: 2000, easing: "swing", step: function (now) { $(this).text(Math.ceil(now)); } }
       );
   });
 })(jQuery);
-
-function active_home() {
-  document.getElementById("li_home").className = "active";
-}
-
-function active_portfolio() {
-  document.getElementById("li_portfolio").className = "active";
-}
-
-function active_services() {
-  document.getElementById("li_services").className = "active";
-}
-
-function active_about() {
-  document.getElementById("li_about").className = "active";
-}
-
-function active_contact() {
-  document.getElementById("li_contact").className = "active";
-}

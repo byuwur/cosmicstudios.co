@@ -1,61 +1,59 @@
+<!-- Testimonial Section Begin -->
+<section class="testimonial spad set-bg" data-setbg="img/testimonial-bg.jpg">
+    <div class="container">
+        <div class="section-title center-title">
+            <span><?= $loved; ?></span>
+            <h2><?= $says; ?></h2>
+        </div>
+        <div class="testimonial__slider owl-carousel">
+            <?php foreach ($test_text as $i => $test) { ?>
+                <div class="testimonial__item">
+                    <p><?= $test; ?></p>
+                    <img src="<?= $to_home . $test_img[$i]; ?>" alt="">
+                    <h5><?= $test_name[$i]; ?></h5>
+                    <span><?= $test_charge[$i]; ?></span>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
 <!-- Team Section Begin -->
 <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title team__title">
-                    <span><?= $pleasure; ?></span>
-                    <h2><?= $weare; ?></h2>
+            <div class="section-title team__title col-12">
+                <span><?= $pleasure; ?></span>
+                <h2><?= $weare; ?></h2>
+            </div>
+            <div class="col-md-4 p-0 team__item team__item--second set-bg" data-setbg="<?= $to_home; ?>img/mateus.jpg">
+                <div class="team__item__text">
+                    <h4>MATEUS ANDRÉS</h4>
+                    <a href="<?= $byuwur_link[0]; ?>" target="_blank"><?= $byuwur; ?></a><br>
+                    <?php foreach ($byuwur_link as $i => $link) { ?>
+                        <a class="team__item__social" href="<?= $link; ?>" target="_blank"><i class="<?= $byuwur_link_icon[$i]; ?>"></i></a>
+                    <?php } ?>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--second set-bg" data-setbg="img/mateus.jpg">
-                    <div class="team__item__text">
-                        <h4>MATEUS ANDRÉS</h4>
-                        <a href="<?= $byuwur_link[0]; ?>" target="_blank">
-                            <p><?= $byuwur; ?></p>
-                        </a>
-                        <div class="team__item__social">
-                            <?php foreach ($byuwur_link as $i => $link) { ?>
-                                <a href="<?= $link; ?>" target="_blank"><i class="<?= $byuwur_link_icon[$i]; ?>"></i></a>
-                            <?php } ?>
-                        </div>
-                    </div>
+            <div class="col-md-4 p-0 team__item team__item--third set-bg" data-setbg="<?= $to_home; ?>img/cristian.jpg">
+                <div class="team__item__text">
+                    <h4>CRISTIAN PARRA</h4>
+                    <a href="<?= $crisprodu_link[0]; ?>" target="_blank"><?= $crisprodu; ?></a><br>
+                    <?php foreach ($crisprodu_link as $i => $link) { ?>
+                        <a class="team__item__social" href="<?= $link; ?>" target="_blank"><i class="<?= $crisprodu_link_icon[$i]; ?>"></i></a>
+                    <?php } ?>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--third set-bg" data-setbg="img/cristian.jpg">
-                    <div class="team__item__text">
-                        <h4>CRISTIAN PARRA</h4>
-                        <a href="<?= $crisprodu_link[0]; ?>" target="_blank">
-                            <p><?= $crisprodu; ?></p>
-                        </a>
-                        <div class="team__item__social">
-                            <?php foreach ($crisprodu_link as $i => $link) { ?>
-                                <a href="<?= $link; ?>" target="_blank"><i class="<?= $crisprodu_link_icon[$i]; ?>"></i></a>
-                            <?php } ?>
-                        </div>
-                    </div>
+            <div class="col-md-4 p-0 team__item team__item--four set-bg" data-setbg="<?= $to_home; ?>img/tito.jpg">
+                <div class="team__item__text">
+                    <h4>TITO BOCANEGRA</h4>
+                    <a href="<?= $eltitogs_link[0]; ?>" target="_blank"><?= $eltitogs; ?></a><br>
+                    <?php foreach ($eltitogs_link as $i => $link) { ?>
+                        <a class="team__item__social" href="<?= $link; ?>" target="_blank"><i class="<?= $eltitogs_link_icon[$i]; ?>"></i></a>
+                    <?php } ?>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 p-0">
-                <div class="team__item team__item--four set-bg" data-setbg="img/tito.jpg">
-                    <div class="team__item__text">
-                        <h4>TITO BOCANEGRA</h4>
-                        <a href="<?= $eltitogs_link[0]; ?>" target="_blank">
-                            <p><?= $eltitogs; ?></p>
-                        </a>
-                        <div class="team__item__social">
-                            <?php foreach ($eltitogs_link as $i => $link) { ?>
-                                <a href="<?= $link; ?>" target="_blank"><i class="<?= $eltitogs_link_icon[$i]; ?>"></i></a>
-                            <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 p-0">
+            <div class="col-12 p-0">
                 <div class="team__btn">
                     <a href="<?= $_about; ?>" target="_blank" class="primary-btn"><?= $meet; ?></a>
                 </div>
@@ -66,47 +64,16 @@
 <!-- Team Section End -->
 <!-- Counter Section Begin -->
 <section class="counter">
-    <div class="container">
-        <div class="counter__content">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="counter__item">
-                        <div class="counter__item__text">
-                            <i class="fas fa-check-circle counter_icon"></i>
-                            <h2 class="counter_num"><?= $counterq1; ?></h2>
-                            <p><?= $counter1; ?></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="counter__item second__item">
-                        <div class="counter__item__text">
-                            <i class="fas fa-thumbs-up counter_icon"></i>
-                            <h2 class="counter_num"><?= $counterq2; ?></h2>
-                            <p><?= $counter2; ?></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="counter__item third__item">
-                        <div class="counter__item__text">
-                            <i class="fas fa-user-friends counter_icon"></i>
-                            <h2 class="counter_num"><?= $counterq3; ?></h2>
-                            <p><?= $counter3; ?></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="counter__item four__item">
-                        <div class="counter__item__text">
-                            <i class="fas fa-clipboard-list counter_icon"></i>
-                            <h2 class="counter_num"><?= $counterq4; ?></h2>
-                            <p><?= $counter4; ?></p>
-                        </div>
-                    </div>
+    <div class="container row">
+        <?php foreach ($counter_q as $i => $count) { ?>
+            <div class="col-6 col-md-3 counter__item <?= $i % 2 ? "second__item" : ""; ?>">
+                <div class="counter__item__text">
+                    <i class="<?= $counter_i[$i]; ?>"></i>
+                    <h2><?= $count; ?></h2>
+                    <p><?= $counter[$i]; ?></p>
                 </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
 </section>
 <!-- Counter Section End -->

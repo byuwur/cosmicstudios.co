@@ -1,3 +1,18 @@
+<!-- modal -->
+<div id="modal_front" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel">
+    <div id="modal_front_container" class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div id="modal_front_title" class="modal-header m-0 fs-5 alert alert-success">Info.</div>
+            <div id="modal_front_body" class="modal-body"></div>
+            <div class="modal-footer">
+                <a id="modal_front_back" href="javascript:$('#modal_front').modal('hide');" onclick="$('#modal_front').modal('hide')" class="btn btn-dark"><?= $_close; ?></a>
+                <a id="modal_front_ok" href="javascript:;" class="btn btn-success"><?= $_ok; ?></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+<!-- footer -->
 <footer class="footer">
     <div class="container">
         <div class="footer__top">
@@ -12,8 +27,8 @@
                         <?php foreach ($cosmic_link as $i => $link) { ?>
                             <a href="<?= $link; ?>" target="_blank"><i class="<?= $cosmic_link_icon[$i]; ?>"></i></a>
                         <?php } ?>
-                        <a href="es" title="Español"><img src="img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
-                        <a href="en" title="English"><img src="img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
+                        <a href="<?= $to_home; ?>es" title="Español"><img src="<?= $to_home; ?>img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
+                        <a href="<?= $to_home; ?>en" title="English"><img src="<?= $to_home; ?>img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -58,14 +73,16 @@
         </div>
     </div>
 </footer>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/mixitup.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
+<!-- end footer -->
+<script src="<?= $to_home; ?>js/jquery-3.3.1.min.js"></script>
+<script src="<?= $to_home; ?>js/bootstrap.min.js"></script>
+<script src="<?= $to_home; ?>js/jquery.magnific-popup.min.js"></script>
+<script src="<?= $to_home; ?>js/mixitup.min.js"></script>
+<script src="<?= $to_home; ?>js/masonry.pkgd.min.js"></script>
+<script src="<?= $to_home; ?>js/jquery.slicknav.js"></script>
+<script src="<?= $to_home; ?>js/owl.carousel.min.js"></script>
+<script src="<?= $to_home; ?>js/main.js"></script>
+<script src="<?= $to_home; ?>_functions.js"></script>
 </body>
 
 </html>

@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <?php
-if (isset($_GET['lang']))
+require_once "./_var.php";
+
+if (isset($_GET['lang'])) {
     switch ($_GET['lang']) {
         case 'es':
         case 'en':
-            require_once "lang/lang_" . $_GET['lang'] . ".php";
             setcookie('lang', $_GET['lang'], time() + 31536000, '/', '', false, false);
+            require_once $to_home . "lang/lang_" . $_GET['lang'] . ".php";
             echo "<html lang='" . $_GET['lang'] . "'>";
             $lang = $_GET['lang'];
             break;
     }
-else if (isset($_COOKIE['lang']))
+} else if (isset($_COOKIE['lang'])) {
     switch ($_COOKIE['lang']) {
         case 'es':
         case 'en':
-            require_once "lang/lang_" . $_COOKIE['lang'] . ".php";
+            require_once $to_home . "lang/lang_" . $_COOKIE['lang'] . ".php";
             echo "<html lang='" . $_COOKIE['lang'] . "'>";
             $lang = $_COOKIE['lang'];
             break;
     }
-else {
+} else {
     setcookie('lang', 'es', time() + 31536000, '/', '', false, false);
-    header("Location: ./");
+    require_once $to_home . "lang/lang_es.php";
+    echo "<html lang='es'>";
+    $lang = 'es';
 }
 
 if (isset($_GET['title']))
     switch ($_GET['title']) {
         case 0:
-            $title = "COSMIC Studios - " . $home;
+            $title = "COSMIC Studios | " . $home;
             break;
         case 1:
-            $title = "COSMIC Studios - " . $about;
+            $title = "COSMIC Studios | " . $about;
             break;
         case 2:
-            $title = "COSMIC Studios - " . $services;
+            $title = "COSMIC Studios | " . $services;
             break;
         case 3:
-            $title = "COSMIC Studios - " . $portfolio;
+            $title = "COSMIC Studios | " . $portfolio;
             break;
         case 4:
-            $title = "COSMIC Studios - " . $contact;
+            $title = "COSMIC Studios | " . $contact;
             break;
         default:
             $title = "COSMIC Studios";
@@ -64,22 +68,23 @@ else $title = "COSMIC Studios";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Productora de fotografía y vídeo profesional. Empresa productora de medios y radiodifusión." />
     <meta name="keywords" content="COSMIC Studios, cosmicstudios.co, producción, productora, producción audiovisual, medios, fotografía" />
-    <meta name="author" content="Mateus [byUwUr]" />
-    <meta name="copyright" content="Mateus [byUwUr]" />
+    <meta name="author" content="[Mateus] byUwUr" />
+    <meta name="copyright" content="[Mateus] byUwUr" />
     <meta name="theme-color" content="#006" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="<?= $to_home; ?>img/favicon.png" />
+    <link rel="icon" type="image/png" href="<?= $to_home; ?>img/favicon.png" />
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/fontawesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/fontawesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/style.css" type="text/css" />
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -92,7 +97,7 @@ else $title = "COSMIC Studios";
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-6">
-                    <a href="./">
+                    <a href="<?= $to_home; ?>">
                         <div class="header__logo"><i></i></div>
                     </a>
                 </div>
@@ -100,7 +105,7 @@ else $title = "COSMIC Studios";
                     <div class="header__nav__option">
                         <nav class="header__nav__menu mobile-menu">
                             <ul>
-                                <li id="li_home"><a href="./"><?= $home; ?></a></li>
+                                <li id="li_home"><a href="<?= $to_home; ?>"><?= $home; ?></a></li>
                                 <li id="li_portfolio"><a href="<?= $_portfolio; ?>"><?= $portfolio; ?></a></li>
                                 <li id="li_services"><a href="<?= $_services; ?>"><?= $services; ?></a>
                                     <!--ul class="dropdown">
@@ -115,8 +120,8 @@ else $title = "COSMIC Studios";
                             <?php foreach ($cosmic_link as $i => $link) { ?>
                                 <a href="<?= $link; ?>" target="_blank"><i class="<?= $cosmic_link_icon[$i]; ?>"></i></a>
                             <?php } ?>
-                            <a href="es" title="Español"><img src="img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> ES</a>
-                            <a href="en" title="English"><img src="img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> EN</a>
+                            <a href="<?= $to_home; ?>es" title="Español"><img src="img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> ES</a>
+                            <a href="<?= $to_home; ?>en" title="English"><img src="img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> EN</a>
                         </div>
                     </div>
                 </div>
@@ -124,7 +129,7 @@ else $title = "COSMIC Studios";
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <video class="video-container" muted loop>
-        <source src="./img/bg.mp4" type="video/mp4" />
-        <source src="./img/bg.webm" type="video/webm" />
+    <video class="video-container" muted loop autoplay>
+        <source src="<?= $to_home; ?>img/bg.mp4" type="video/mp4" />
+        <source src="<?= $to_home; ?>img/bg.webm" type="video/webm" />
     </video>

@@ -1,40 +1,17 @@
 <?php
 $_GET['title'] = 3;
-require("./header.php");
+require_once "./header.php";
+require_once $to_home . "breadcrumb.php";
 ?>
-<div class="breadcrumb-option spad video-foreground">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="breadcrumb__text">
-                    <h2><?= $portfolio_title; ?></h2>
-                    <div class="breadcrumb__links">
-                        <a href="javascript:;"><?= $weare; ?></a><span><?= $portfolio; ?></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Portfolio Section Begin -->
 <section class="portfolio spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <ul class="portfolio__filter">
-                    <li data-filter="*" class="active"><?= $cat0; ?></li>
-                    <li data-filter=".cdc"><?= $cat1; ?></li>
-                    <li data-filter=".tv"><?= $cat2; ?></li>
-                    <li data-filter=".institution"><?= $cat3; ?></li>
-                    <li data-filter=".enterprise"><?= $cat4; ?></li>
-                    <li data-filter=".academy"><?= $cat5; ?></li>
-                    <li data-filter=".events"><?= $cat6; ?></li>
-                    <li data-filter=".cultural"><?= $cat7; ?></li>
-                    <li data-filter=".sports"><?= $cat8; ?></li>
-                    <li data-filter=".music"><?= $cat9; ?></li>
-                    <li data-filter=".tourism"><?= $cat10; ?></li>
-                    <li data-filter=".politics"><?= $cat11; ?></li>
+                    <?php foreach ($category as $i => $categ) { ?>
+                        <li data-filter="<?= $categ; ?>" class="<?= !$i ? "active" : "" ?>"><?= $cat[$i]; ?></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
@@ -58,6 +35,8 @@ require("./header.php");
 </section>
 <!-- Portfolio Section End -->
 <?php
-require("./footer.php");
-echo '<script type="text/javascript"> active_portfolio(); </script>';
+require_once $to_home . "footer.php";
 ?>
+<script>
+    $(document).ready(() => active_portfolio());
+</script>
