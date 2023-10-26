@@ -34,9 +34,11 @@ require_once $to_home . "breadcrumb.php";
     </div>
 </section>
 <!-- Portfolio Section End -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        active_portfolio();
+    });
+</script>
 <?php
 require_once $to_home . "footer.php";
 ?>
-<script>
-    $(document).ready(() => active_portfolio());
-</script>

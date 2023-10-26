@@ -37,10 +37,12 @@ require_once $to_home . "breadcrumb.php";
     </div>
 </section>
 <!-- About Section End -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        active_about();
+    });
+</script>
 <?php
 require_once $to_home . "extra.about.php";
 require_once $to_home . "footer.php";
 ?>
-<script>
-    $(document).ready(() => active_about());
-</script>

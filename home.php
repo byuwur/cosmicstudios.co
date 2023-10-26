@@ -59,11 +59,13 @@ require_once "./header.php";
     </div>
 </section>
 <!-- Work Section End -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        active_home();
+    });
+</script>
 <?php
 require_once $to_home . "extra.services.php";
 require_once $to_home . "extra.about.php";
 require_once $to_home . "footer.php";
 ?>
-<script>
-    $(document).ready(() => active_home());
-</script>

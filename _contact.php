@@ -21,7 +21,7 @@ $html = 'Hola, ' . $easter_name . '.<br>' . $message;
 $sg_email = new \SendGrid\Mail\Mail();
 $sg_email->setFrom("", "[Mateus] byUwUr");
 $sg_email->addTos([
-    "contacto.cosmicstudios@gmail.com" => "Mateus"
+    "contacto.cosmicstudios@gmail.com" => "Mateus @ Cosmic Studios"
 ]);
 $sg_email->setSubject($_POST["mail_subject"]);
 $sg_email->addContent("text/html", $html);

@@ -19,10 +19,12 @@ require_once $to_home . "breadcrumb.php";
     </div>
 </section>
 <!-- Services Section End -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        active_services();
+    });
+</script>
 <?php
 require_once $to_home . "extra.services.php";
 require_once $to_home . "footer.php";
 ?>
-<script>
-    $(document).ready(() => active_services());
-</script>

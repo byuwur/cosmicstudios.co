@@ -78,13 +78,23 @@ else $title = "COSMIC Studios";
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <!-- Css Styles -->
-    <link rel="stylesheet" href="<?= $to_home; ?>css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/fontawesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/owl.carousel.min.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/magnific-popup.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/slicknav.min.css" type="text/css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/style.css" type="text/css" />
-    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="<?= $to_home; ?>css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/fontawesome.min.css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/magnific-popup.css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/slicknav.min.css" />
+    <link rel="stylesheet" href="<?= $to_home; ?>css/style.css" />
+    <!-- Scripts -->
+    <script src="<?= $to_home; ?>js/jquery-3.3.1.min.js" defer></script>
+    <script src="<?= $to_home; ?>js/bootstrap.min.js" defer></script>
+    <script src="<?= $to_home; ?>js/jquery.magnific-popup.min.js" defer></script>
+    <script src="<?= $to_home; ?>js/mixitup.min.js" defer></script>
+    <script src="<?= $to_home; ?>js/masonry.pkgd.min.js" defer></script>
+    <script src="<?= $to_home; ?>js/jquery.slicknav.js" defer></script>
+    <script src="<?= $to_home; ?>js/owl.carousel.min.js" defer></script>
+    <script src="<?= $to_home; ?>js/main.js" defer></script>
+    <script src="<?= $to_home; ?>_functions.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
