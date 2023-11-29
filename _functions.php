@@ -15,19 +15,19 @@ function api_respond($status, $error, $message, $data = null)
 }
 
 // --- functions ---
-function suppressErrors()
+function suppress_errors()
 {
     error_reporting(0);
     ini_set('display_errors', 0);
 }
 
-function escape2html($input)
+function escape_html($input)
 {
     $output = htmlspecialchars($input, ENT_QUOTES, 'UTF-8', false);
     return nl2br($output);
 }
 
-function randomString($length)
+function random_string($length)
 {
     $string = "";
     $char = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz";
