@@ -1,7 +1,7 @@
 <?php
 $_GET['title'] = 2;
 require_once "./header.php";
-require_once $to_home . "breadcrumb.php";
+require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- Services Section Begin -->
 <section class="services-page spad">
@@ -25,6 +25,6 @@ require_once $to_home . "breadcrumb.php";
     });
 </script>
 <?php
-require_once $to_home . "extra.services.php";
-require_once $to_home . "footer.php";
+require_once $TO_HOME . "extra.services.php";
+require_once $TO_HOME . "footer.php";
 ?>

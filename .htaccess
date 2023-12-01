@@ -1,15 +1,9 @@
-# DO NOT REMOVE THIS LINE AND THE LINES BELOW SSL_REDIRECT:cosmicstudios.co
 Options -MultiViews
 RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^cosmicstudios.co$
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
-# DO NOT REMOVE THIS LINE AND THE LINES ABOVE SSL_REDIRECT:cosmicstudios.co
-#RewriteBase /cosmicstudios.co/
-RewriteCond %{REQUEST_FILENAME} !-d
+RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
-#Session garbage collector
-#php_value session.gc_maxlifetime 21600
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ home.php?uri=$1&%{QUERY_STRING} [L,QSA]
 #Error Handler
 ErrorDocument 404 /_error.php?e=404
 ErrorDocument 403 /_error.php?e=403
@@ -19,21 +13,6 @@ ErrorDocument 500 /_error.php?e=500
 ErrorDocument 502 /_error.php?e=502
 ErrorDocument 503 /_error.php?e=503
 ErrorDocument 504 /_error.php?e=504
-#Alternate Index
-DirectoryIndex home.php
-#Misc
-RewriteRule ^es/?$ ?lang=es [NE,QSA]
-RewriteRule ^en/?$ ?lang=en [NE,QSA]
-RewriteRule ^inicio/?$ index.php?lang=es [NE,QSA]
-RewriteRule ^home/?$ index.php?lang=en [NE,QSA]
-RewriteRule ^portafolio/?$ portfolio.php?lang=es [NE,QSA]
-RewriteRule ^portfolio/?$ portfolio.php?lang=en [NE,QSA]
-RewriteRule ^servicios/?$ services.php?lang=es [NE,QSA]
-RewriteRule ^services/?$ services.php?lang=en [NE,QSA]
-RewriteRule ^equipo/?$ about.php?lang=es [NE,QSA]
-RewriteRule ^team/?$ about.php?lang=en [NE,QSA]
-RewriteRule ^contacto/?$ contact.php?lang=es [NE,QSA]
-RewriteRule ^contact/?$ contact.php?lang=en [NE,QSA]
 #ANTISPAM
 #Block proxies almost of all kind. - tested HMA High +KA and did not passed.
 RewriteCond %{HTTP:HTTP_VIA}      !^$ [OR]
@@ -55,7 +34,7 @@ RewriteRule ^(.*)$ - [F]
 RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
 RewriteRule .* - [F]
 # Protect
-<FilesMatch "^(.*\.)?(env|md|json|lock|htaccess|ini|log|pem|sql|txt)$">
+<FilesMatch "^(.*\.)?(git|gitignore|rb|inc|ht|env|md|json|lock|htaccess|ini|log|pem|sql|txt)$">
     Order deny,allow
     Deny from all
 </FilesMatch>

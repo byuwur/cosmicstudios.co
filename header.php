@@ -7,7 +7,7 @@ if (isset($_GET['lang'])) {
         case 'es':
         case 'en':
             setcookie('lang', $_GET['lang'], time() + 31536000, '/', '', false, false);
-            require_once $to_home . "lang/lang_" . $_GET['lang'] . ".php";
+            require_once $TO_HOME . "lang/lang_" . $_GET['lang'] . ".php";
             echo "<html lang='" . $_GET['lang'] . "'>";
             $lang = $_GET['lang'];
             break;
@@ -16,14 +16,14 @@ if (isset($_GET['lang'])) {
     switch ($_COOKIE['lang']) {
         case 'es':
         case 'en':
-            require_once $to_home . "lang/lang_" . $_COOKIE['lang'] . ".php";
+            require_once $TO_HOME . "lang/lang_" . $_COOKIE['lang'] . ".php";
             echo "<html lang='" . $_COOKIE['lang'] . "'>";
             $lang = $_COOKIE['lang'];
             break;
     }
 } else {
     setcookie('lang', 'es', time() + 31536000, '/', '', false, false);
-    require_once $to_home . "lang/lang_es.php";
+    require_once $TO_HOME . "lang/lang_es.php";
     echo "<html lang='es'>";
     $lang = 'es';
 }
@@ -72,28 +72,28 @@ else $title = "COSMIC Studios";
     <meta name="copyright" content="[Mateus] byUwUr" />
     <meta name="theme-color" content="#006" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" type="image/png" href="<?= $to_home; ?>img/favicon.png" />
-    <link rel="icon" type="image/png" href="<?= $to_home; ?>img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="<?= $HOME_PATH; ?>img/favicon.png" />
+    <link rel="icon" type="image/png" href="<?= $HOME_PATH; ?>img/favicon.png" />
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <!-- Css Styles -->
-    <link rel="stylesheet" href="<?= $to_home; ?>css/bootstrap.min.css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/fontawesome.min.css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/magnific-popup.css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/slicknav.min.css" />
-    <link rel="stylesheet" href="<?= $to_home; ?>css/style.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/fontawesome.min.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/magnific-popup.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/slicknav.min.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/style.css" />
     <!-- Scripts -->
-    <script src="<?= $to_home; ?>js/jquery-3.3.1.min.js" defer></script>
-    <script src="<?= $to_home; ?>js/bootstrap.min.js" defer></script>
-    <script src="<?= $to_home; ?>js/jquery.magnific-popup.min.js" defer></script>
-    <script src="<?= $to_home; ?>js/mixitup.min.js" defer></script>
-    <script src="<?= $to_home; ?>js/masonry.pkgd.min.js" defer></script>
-    <script src="<?= $to_home; ?>js/jquery.slicknav.js" defer></script>
-    <script src="<?= $to_home; ?>js/owl.carousel.min.js" defer></script>
-    <script src="<?= $to_home; ?>js/main.js" defer></script>
-    <script src="<?= $to_home; ?>_functions.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>js/jquery-3.3.1.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>js/bootstrap.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>js/jquery.magnific-popup.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>js/mixitup.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>js/masonry.pkgd.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>js/jquery.slicknav.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>js/owl.carousel.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>js/main.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>_functions.js" defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
@@ -107,7 +107,7 @@ else $title = "COSMIC Studios";
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-6">
-                    <a href="<?= $to_home; ?>">
+                    <a href="<?= $HOME_PATH; ?>">
                         <div class="header__logo"><i></i></div>
                     </a>
                 </div>
@@ -115,7 +115,7 @@ else $title = "COSMIC Studios";
                     <div class="header__nav__option">
                         <nav class="header__nav__menu mobile-menu">
                             <ul>
-                                <li id="li_home"><a href="<?= $to_home; ?>"><?= $home; ?></a></li>
+                                <li id="li_home"><a href="<?= $HOME_PATH; ?>"><?= $home; ?></a></li>
                                 <li id="li_portfolio"><a href="<?= $_portfolio; ?>"><?= $portfolio; ?></a></li>
                                 <li id="li_services"><a href="<?= $_services; ?>"><?= $services; ?></a>
                                     <!--ul class="dropdown">
@@ -130,8 +130,8 @@ else $title = "COSMIC Studios";
                             <?php foreach ($cosmic_link as $i => $link) { ?>
                                 <a href="<?= $link; ?>" target="_blank"><i class="<?= $cosmic_link_icon[$i]; ?>"></i></a>
                             <?php } ?>
-                            <a href="<?= $to_home; ?>es" title="Español"><img src="img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> ES</a>
-                            <a href="<?= $to_home; ?>en" title="English"><img src="img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> EN</a>
+                            <a href="<?= $HOME_PATH; ?>es" title="Español"><img src="img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> ES</a>
+                            <a href="<?= $HOME_PATH; ?>en" title="English"><img src="img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /> EN</a>
                         </div>
                     </div>
                 </div>
@@ -140,6 +140,6 @@ else $title = "COSMIC Studios";
         </div>
     </header>
     <video class="video-container" muted loop autoplay>
-        <source src="<?= $to_home; ?>img/bg.mp4" type="video/mp4" />
-        <source src="<?= $to_home; ?>img/bg.webm" type="video/webm" />
+        <source src="<?= $HOME_PATH; ?>img/bg.mp4" type="video/mp4" />
+        <source src="<?= $HOME_PATH; ?>img/bg.webm" type="video/webm" />
     </video>

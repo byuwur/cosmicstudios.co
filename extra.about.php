@@ -9,7 +9,7 @@
             <?php foreach ($test_text as $i => $test) { ?>
                 <div class="testimonial__item">
                     <p><?= $test; ?></p>
-                    <img src="<?= $to_home . $test_img[$i]; ?>" alt="">
+                    <img src="<?= $HOME_PATH . $test_img[$i]; ?>" alt="">
                     <h5><?= $test_name[$i]; ?></h5>
                     <span><?= $test_charge[$i]; ?></span>
                 </div>
@@ -26,7 +26,7 @@
                 <span><?= $pleasure; ?></span>
                 <h2><?= $weare; ?></h2>
             </div>
-            <div class="col-md-4 p-0 team__item team__item--second set-bg" data-setbg="<?= $to_home; ?>img/mateus.jpg">
+            <div class="col-md-4 p-0 team__item team__item--second set-bg" data-setbg="<?= $HOME_PATH; ?>img/mateus.jpg">
                 <div class="team__item__text">
                     <h4>MATEUS ANDRÉS</h4>
                     <a href="<?= $byuwur_link[0]; ?>" target="_blank"><?= $byuwur; ?></a><br>
@@ -35,7 +35,7 @@
                     <?php } ?>
                 </div>
             </div>
-            <div class="col-md-4 p-0 team__item team__item--third set-bg" data-setbg="<?= $to_home; ?>img/cristian.jpg">
+            <div class="col-md-4 p-0 team__item team__item--third set-bg" data-setbg="<?= $HOME_PATH; ?>img/cristian.jpg">
                 <div class="team__item__text">
                     <h4>CRISTIAN PARRA</h4>
                     <a href="<?= $crisprodu_link[0]; ?>" target="_blank"><?= $crisprodu; ?></a><br>
@@ -44,7 +44,7 @@
                     <?php } ?>
                 </div>
             </div>
-            <div class="col-md-4 p-0 team__item team__item--four set-bg" data-setbg="<?= $to_home; ?>img/tito.jpg">
+            <div class="col-md-4 p-0 team__item team__item--four set-bg" data-setbg="<?= $HOME_PATH; ?>img/tito.jpg">
                 <div class="team__item__text">
                     <h4>TITO BOCANEGRA</h4>
                     <a href="<?= $eltitogs_link[0]; ?>" target="_blank"><?= $eltitogs; ?></a><br>

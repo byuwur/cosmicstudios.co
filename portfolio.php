@@ -1,7 +1,7 @@
 <?php
 $_GET['title'] = 3;
 require_once "./header.php";
-require_once $to_home . "breadcrumb.php";
+require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- Portfolio Section Begin -->
 <section class="portfolio spad">
@@ -40,5 +40,5 @@ require_once $to_home . "breadcrumb.php";
     });
 </script>
 <?php
-require_once $to_home . "footer.php";
+require_once $TO_HOME . "footer.php";
 ?>

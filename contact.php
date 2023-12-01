@@ -1,7 +1,7 @@
 <?php
 $_GET['title'] = 4;
 require_once "./header.php";
-require_once $to_home . "breadcrumb.php";
+require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- Contact Widget Section Begin -->
 <section class="contact-widget spad">
@@ -56,7 +56,7 @@ require_once $to_home . "breadcrumb.php";
             });
             $.ajax({
                 type: "POST",
-                url: "<?= $to_home; ?>_contact.php",
+                url: "<?= $HOME_PATH; ?>_contact.php",
                 data: formData,
                 dataType: "json",
                 success: function(response) {
@@ -74,5 +74,5 @@ require_once $to_home . "breadcrumb.php";
     });
 </script>
 <?php
-require_once $to_home . "footer.php";
+require_once $TO_HOME . "footer.php";
 ?>

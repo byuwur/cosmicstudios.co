@@ -13,8 +13,8 @@
                         <?php foreach ($cosmic_link as $i => $link) { ?>
                             <a href="<?= $link; ?>" target="_blank"><i class="<?= $cosmic_link_icon[$i]; ?>"></i></a>
                         <?php } ?>
-                        <a href="<?= $to_home; ?>es" title="Español"><img src="<?= $to_home; ?>img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
-                        <a href="<?= $to_home; ?>en" title="English"><img src="<?= $to_home; ?>img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
+                        <a href="<?= $HOME_PATH; ?>es" title="Español"><img src="<?= $HOME_PATH; ?>img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
+                        <a href="<?= $HOME_PATH; ?>en" title="English"><img src="<?= $HOME_PATH; ?>img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
                     </div>
                 </div>
             </div>

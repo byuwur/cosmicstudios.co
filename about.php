@@ -1,7 +1,7 @@
 <?php
 $_GET['title'] = 1;
 require_once "./header.php";
-require_once $to_home . "breadcrumb.php";
+require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- About Section Begin -->
 <section class="about spad">
@@ -43,6 +43,6 @@ require_once $to_home . "breadcrumb.php";
     });
 </script>
 <?php
-require_once $to_home . "extra.about.php";
-require_once $to_home . "footer.php";
+require_once $TO_HOME . "extra.about.php";
+require_once $TO_HOME . "footer.php";
 ?>
