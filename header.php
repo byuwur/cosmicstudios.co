@@ -139,7 +139,8 @@ else $title = "COSMIC Studios";
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <video class="video-container" muted loop autoplay>
+    <video class="video-container" muted loop>
         <source src="<?= $HOME_PATH; ?>img/bg.mp4" type="video/mp4" />
         <source src="<?= $HOME_PATH; ?>img/bg.webm" type="video/webm" />
     </video>
+    <div id="spa-page-content-container"> <!-- body start -->

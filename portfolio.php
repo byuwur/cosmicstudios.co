@@ -1,6 +1,6 @@
 <?php
 $_GET['title'] = 3;
-require_once "./header.php";
+require_once $TO_HOME . "header.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- Portfolio Section Begin -->

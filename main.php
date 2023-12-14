@@ -1,5 +1,5 @@
 <?php
-require_once "./header.php";
+//require_once $TO_HOME . "header.php";
 ?>
 <!-- Hero Section Begin -->
 <section class="hero__slider owl-carousel video-foreground">

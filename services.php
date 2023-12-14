@@ -1,6 +1,6 @@
 <?php
 $_GET['title'] = 2;
-require_once "./header.php";
+require_once $TO_HOME . "header.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- Services Section Begin -->
