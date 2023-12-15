@@ -1,5 +1,6 @@
 <?php
-//require_once $TO_HOME . "header.php";
+require_once "./_var.php";
+require_once $TO_HOME . "common.php";
 ?>
 <!-- Hero Section Begin -->
 <section class="hero__slider owl-carousel video-foreground">
@@ -9,7 +10,7 @@
             <div class="col-lg-6 hero__text">
                 <span><?= $carousel_sub[$i]; ?></span>
                 <h2><?= $title; ?></h2>
-                <a href="<?= $carousel_link[$i]; ?>" class="primary-btn"><?= $carousel_link_text[$i]; ?></a>
+                <a href="<?= $TO_HOME . $carousel_link[$i]; ?>" class="primary-btn"><?= $carousel_link_text[$i]; ?></a>
             </div>
         </div>
     <?php } ?>
@@ -26,7 +27,7 @@
                 </div>
                 <div class="col-md-8">
                     <p><?= $services_short; ?></p>
-                    <a href="<?= $services; ?>" class="primary-btn"><?= $meetservices; ?></a>
+                    <a href="<?= $TO_HOME . $services; ?>" class="primary-btn"><?= $meetservices; ?></a>
                 </div>
             </div>
             <?php for ($i = 0; $i < 3; $i++) { ?>
@@ -60,12 +61,11 @@
 </section>
 <!-- Work Section End -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        active_home();
-    });
+    innit_page();
+    active_home();
+    document.title = "<?= $titles[$title_index] ?>";
 </script>
 <?php
 require_once $TO_HOME . "extra.services.php";
 require_once $TO_HOME . "extra.about.php";
-require_once $TO_HOME . "footer.php";
 ?>

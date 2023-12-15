@@ -1,6 +1,7 @@
 <?php
-$_GET['title'] = 4;
-require_once $TO_HOME . "header.php";
+$_GET['title'] = 5;
+require_once "./_var.php";
+require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- Contact Widget Section Begin -->
@@ -43,36 +44,32 @@ require_once $TO_HOME . "breadcrumb.php";
 </section>
 <!-- Call To Action Section End -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        active_contact();
-
-        $("#mail_form").submit(function(event) {
-            $("#mail_submit").attr("disabled", true);
-            event.preventDefault();
-            let formData = $("#mail_form").serializeArray();
-            formData.push({
-                name: "mail_submit",
-                value: "1"
-            });
-            $.ajax({
-                type: "POST",
-                url: "<?= $HOME_PATH; ?>_contact.php",
-                data: formData,
-                dataType: "json",
-                success: function(response) {
-                    if (response.status == 200 || response.status == 201 || response.status == 202) show_modal_front("success", "INFO.", "<?= $_mail_thanks; ?>", true);
-                    else show_modal_front("danger", "ERROR", "<?= $_mail_wrong; ?><br><code>(" + response.message + ")</code>", true);
-                    $("#mail_submit").removeAttr("disabled");
-                },
-                error: function(xhr, status, error) {
-                    show_modal_front("danger", "ERROR", "<?= $_mail_wrong; ?>", true);
-                    $("#mail_submit").removeAttr("disabled");
-                    console.error(xhr.responseText);
-                }
-            });
+    innit_page();
+    active_contact();
+    document.title = "<?= $titles[$title_index] ?>";
+    $("#mail_form").submit(function(event) {
+        $("#mail_submit").attr("disabled", true);
+        event.preventDefault();
+        let formData = $("#mail_form").serializeArray();
+        formData.push({
+            name: "mail_submit",
+            value: "1"
+        });
+        $.ajax({
+            type: "POST",
+            url: "<?= $HOME_PATH; ?>_contact.php",
+            data: formData,
+            dataType: "json",
+            success: function(response) {
+                if (response.status == 200 || response.status == 201 || response.status == 202) show_modal_front("success", "INFO.", "<?= $_mail_thanks; ?>", true);
+                else show_modal_front("danger", "ERROR", "<?= $_mail_wrong; ?><br><code>(" + response.message + ")</code>", true);
+                $("#mail_submit").removeAttr("disabled");
+            },
+            error: function(xhr, status, error) {
+                show_modal_front("danger", "ERROR", "<?= $_mail_wrong; ?>", true);
+                $("#mail_submit").removeAttr("disabled");
+                console.error(xhr.responseText);
+            }
         });
     });
 </script>
-<?php
-require_once $TO_HOME . "footer.php";
-?>

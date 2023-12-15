@@ -1,6 +1,7 @@
 <?php
-$_GET['title'] = 2;
-require_once $TO_HOME . "header.php";
+$_GET['title'] = 3;
+require_once "./_var.php";
+require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- Services Section Begin -->
@@ -20,11 +21,10 @@ require_once $TO_HOME . "breadcrumb.php";
 </section>
 <!-- Services Section End -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        active_services();
-    });
+    innit_page();
+    active_services();
+    document.title = "<?= $titles[$title_index] ?>";
 </script>
 <?php
 require_once $TO_HOME . "extra.services.php";
-require_once $TO_HOME . "footer.php";
 ?>

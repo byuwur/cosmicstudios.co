@@ -1,3 +1,7 @@
+<?php
+require_once "./_var.php";
+require_once $TO_HOME . "common.php";
+?>
 <!-- Testimonial Section Begin -->
 <section class="testimonial spad set-bg" data-setbg="img/testimonial-bg.jpg">
     <div class="container">

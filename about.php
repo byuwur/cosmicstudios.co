@@ -1,6 +1,7 @@
 <?php
-$_GET['title'] = 1;
-require_once $TO_HOME . "header.php";
+$_GET['title'] = 2;
+require_once "./_var.php";
+require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- About Section Begin -->
@@ -38,11 +39,10 @@ require_once $TO_HOME . "breadcrumb.php";
 </section>
 <!-- About Section End -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        active_about();
-    });
+    innit_page();
+    active_about();
+    document.title = "<?= $titles[$title_index] ?>";
 </script>
 <?php
 require_once $TO_HOME . "extra.about.php";
-require_once $TO_HOME . "footer.php";
 ?>

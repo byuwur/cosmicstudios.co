@@ -1,3 +1,7 @@
+<?php
+require_once "./_var.php";
+require_once $TO_HOME . "common.php";
+?>
 <!-- Logo Begin -->
 <div class="logo spad">
     <div class="container">

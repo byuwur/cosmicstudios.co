@@ -1,6 +1,7 @@
 <?php
-$_GET['title'] = 3;
-require_once $TO_HOME . "header.php";
+$_GET['title'] = 4;
+require_once "./_var.php";
+require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
 <!-- Portfolio Section Begin -->
@@ -35,10 +36,7 @@ require_once $TO_HOME . "breadcrumb.php";
 </section>
 <!-- Portfolio Section End -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        active_portfolio();
-    });
+    innit_page();
+    active_portfolio();
+    document.title = "<?= $titles[$title_index] ?>";
 </script>
-<?php
-require_once $TO_HOME . "footer.php";
-?>
