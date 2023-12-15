@@ -14,6 +14,7 @@ $about = "Equipo";
 $services = "Servicios";
 $portfolio = "Portafolio";
 $contact = "Contacto";
+$home_title = "";
 $about_title = "Nuestro Equipo";
 $services_title = "Nuestros Servicios";
 $portfolio_title = "Nuestro Trabajo";
