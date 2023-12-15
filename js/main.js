@@ -4,18 +4,17 @@ const active_portfolio = () => $("#li_portfolio").addClass("active");
 const active_services = () => $("#li_services").addClass("active");
 const active_about = () => $("#li_about").addClass("active");
 const active_contact = () => $("#li_contact").addClass("active");
-(function ($) {
+const innit_page = function () {
+  $("#li_home").removeClass("active");
+  $("#li_portfolio").removeClass("active");
+  $("#li_services").removeClass("active");
+  $("#li_about").removeClass("active");
+  $("#li_contact").removeClass("active");
   /*------------------
         Preloader
     --------------------*/
   $(window).on("load", function () {
-    $(".load-circle-back").delay(500).fadeOut();
-    $(".load-circle-fore").delay(500).fadeOut();
-    $(".load-text").delay(500).fadeOut();
-    $(".loading").delay(500).fadeOut();
-    $(".loading").delay(500).queue(function () {
-      $(this).remove();
-    });
+    $(".load-circle-back, .load-circle-fore, .load-text, .loading").fadeOut(500);
     /*------------------
             Portfolio filter
         --------------------*/
@@ -171,4 +170,6 @@ const active_contact = () => $("#li_contact").addClass("active");
       { duration: 2000, easing: "swing", step: function (now) { $(this).text(Math.ceil(now)); } }
     );
   });
-})(jQuery);
+};
+
+innit_page();
