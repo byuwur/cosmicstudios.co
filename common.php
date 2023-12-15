@@ -35,4 +35,3 @@ $titles = [
     "COSMIC Studios | " . $contact
 ];
 ?>
-<script></script>

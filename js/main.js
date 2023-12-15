@@ -172,5 +172,3 @@ const innit_page = function () {
     );
   });
 };
-
-innit_page();
