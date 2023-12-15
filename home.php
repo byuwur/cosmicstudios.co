@@ -105,7 +105,7 @@ require_once $TO_HOME . "common.php";
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <video class="video-container" muted loop>
+    <video class="video-container" muted loop autoplay>
         <source src="<?= $HOME_PATH; ?>img/bg.mp4" type="video/mp4" />
         <source src="<?= $HOME_PATH; ?>img/bg.webm" type="video/webm" />
     </video>
