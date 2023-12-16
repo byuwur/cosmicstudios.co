@@ -4,7 +4,6 @@ require_once "./_var.php";
 require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
-<!-- Portfolio Section Begin -->
 <section class="portfolio spad">
     <div class="container">
         <div class="row">
@@ -30,11 +29,9 @@ require_once $TO_HOME . "breadcrumb.php";
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
-<!-- Portfolio Section End -->
 <script>
     innit_page();
     active_portfolio();

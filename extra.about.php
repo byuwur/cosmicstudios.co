@@ -2,7 +2,6 @@
 require_once "./_var.php";
 require_once $TO_HOME . "common.php";
 ?>
-<!-- Testimonial Section Begin -->
 <section class="testimonial spad set-bg" data-setbg="img/testimonial-bg.jpg">
     <div class="container">
         <div class="section-title center-title">
@@ -21,8 +20,6 @@ require_once $TO_HOME . "common.php";
         </div>
     </div>
 </section>
-<!-- Testimonial Section End -->
-<!-- Team Section Begin -->
 <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
     <div class="container">
         <div class="row">
@@ -65,8 +62,6 @@ require_once $TO_HOME . "common.php";
         </div>
     </div>
 </section>
-<!-- Team Section End -->
-<!-- Counter Section Begin -->
 <section class="counter">
     <div class="container row">
         <?php foreach ($counter_q as $i => $count) { ?>
@@ -80,4 +75,3 @@ require_once $TO_HOME . "common.php";
         <?php } ?>
     </div>
 </section>
-<!-- Counter Section End -->

@@ -4,7 +4,6 @@ require_once "./_var.php";
 require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
-<!-- About Section Begin -->
 <section class="about spad">
     <div class="container">
         <div class="row">
@@ -37,7 +36,6 @@ require_once $TO_HOME . "breadcrumb.php";
         </div>
     </div>
 </section>
-<!-- About Section End -->
 <script>
     innit_page();
     active_about();

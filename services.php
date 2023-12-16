@@ -4,7 +4,6 @@ require_once "./_var.php";
 require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
-<!-- Services Section Begin -->
 <section class="services-page spad">
     <div class="container">
         <div class="row">
@@ -19,7 +18,6 @@ require_once $TO_HOME . "breadcrumb.php";
     </div>
     </div>
 </section>
-<!-- Services Section End -->
 <script>
     innit_page();
     active_services();

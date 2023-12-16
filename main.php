@@ -2,11 +2,9 @@
 require_once "./_var.php";
 require_once $TO_HOME . "common.php";
 ?>
-<!-- Hero Section Begin -->
 <section class="hero__slider owl-carousel video-foreground">
     <?php foreach ($carousel_title as $i => $title) { ?>
         <div class="hero__item container">
-            <!--div class="hero__picture set-bg" data-setbg=""></div-->
             <div class="col-lg-6 hero__text">
                 <span><?= $carousel_sub[$i]; ?></span>
                 <h2><?= $title; ?></h2>
@@ -15,8 +13,6 @@ require_once $TO_HOME . "common.php";
         </div>
     <?php } ?>
 </section>
-<!-- Hero Section End -->
-<!-- Services Section Begin -->
 <section class="services spad">
     <div class="container">
         <div class="row">
@@ -40,10 +36,6 @@ require_once $TO_HOME . "common.php";
         </div>
     </div>
 </section>
-<!-- Services Section End -->
-
-<!-- TODO: -->
-<!-- Work Section Begin -->
 <section class="work">
     <div class="work__gallery">
         <div class="grid-sizer"></div>
@@ -59,7 +51,6 @@ require_once $TO_HOME . "common.php";
         </div>
     </div>
 </section>
-<!-- Work Section End -->
 <script>
     innit_page();
     active_home();

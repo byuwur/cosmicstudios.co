@@ -4,7 +4,6 @@ require_once "./_var.php";
 require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
-<!-- Contact Widget Section Begin -->
 <section class="contact-widget spad">
     <div class="container">
         <div class="row">
@@ -19,8 +18,6 @@ require_once $TO_HOME . "breadcrumb.php";
         </div>
     </div>
 </section>
-<!-- Contact Widget Section End -->
-<!-- Call To Action Section Begin -->
 <section class="contact spad">
     <div class="container">
         <div class="row">
@@ -42,7 +39,6 @@ require_once $TO_HOME . "breadcrumb.php";
         </div>
     </div>
 </section>
-<!-- Call To Action Section End -->
 <script>
     innit_page();
     active_contact();

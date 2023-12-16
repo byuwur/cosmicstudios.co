@@ -2,7 +2,6 @@
 require_once "./_var.php";
 require_once $TO_HOME . "common.php";
 ?>
-<!-- Logo Begin -->
 <div class="logo spad">
     <div class="container">
         <div class="logo__carousel owl-carousel">
@@ -14,8 +13,6 @@ require_once $TO_HOME . "common.php";
         </div>
     </div>
 </div>
-<!-- Logo End -->
-<!-- Call To Action Section Begin -->
 <section class="set-bg" data-setbg="img/dron.jpg" style="background-position:center;">
     <div class="video-foreground">
         <div class="callto__text py-5 container">
@@ -25,4 +22,3 @@ require_once $TO_HOME . "common.php";
         </div>
     </div>
 </section>
-<!-- Call To Action Section End -->

@@ -28,7 +28,6 @@ const innit_page = function () {
       var mixer = mixitup(containerEl);
     }
   });
-
   /*------------------
         Background Set
     --------------------*/
@@ -36,14 +35,12 @@ const innit_page = function () {
     var bg = $(this).data("setbg");
     $(this).css("background-image", "url(" + bg + ")");
   });
-
   //Masonary
   $(".work__gallery").masonry({
     itemSelector: ".work__item",
     columnWidth: ".grid-sizer",
     gutter: 10,
   });
-
   /*------------------
     Navigation
   --------------------*/
@@ -51,7 +48,6 @@ const innit_page = function () {
     prependTo: "#mobile-menu-wrap",
     allowParentLinks: true,
   });
-
   /*------------------
     Hero Slider
   --------------------*/
@@ -67,7 +63,6 @@ const innit_page = function () {
     autoHeight: false,
     autoplay: true,
   });
-
   var dot = $(".hero__slider .owl-dot");
   dot.each(function () {
     var index = $(this).index() + 1;
@@ -77,7 +72,6 @@ const innit_page = function () {
       $(this).html(index);
     }
   });
-
   /*------------------
         Testimonial Slider
     --------------------*/
@@ -102,7 +96,6 @@ const innit_page = function () {
       },
     },
   });
-
   /*------------------
         Latest Slider
     --------------------*/
@@ -127,7 +120,6 @@ const innit_page = function () {
       },
     },
   });
-
   /*------------------
         Logo Slider
     --------------------*/
@@ -154,14 +146,12 @@ const innit_page = function () {
       },
     },
   });
-
   /*------------------
         Video Popup
     --------------------*/
   $(".video-popup").magnificPopup({
     type: "iframe",
   });
-
   /*------------------
         Counter
     --------------------*/
