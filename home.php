@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
 require_once "./_var.php";
-require_once $TO_HOME . "_functions.php";
 $routes = [
     "/" => ["URI" => "main.php", "GET" => [], "POST" => []],
     "/es" => ["URI" => "", "GET" => ["lang" => "es"], "POST" => []],
@@ -17,6 +16,7 @@ $routes = [
     "/contacto" => ["URI" => "contact.php", "GET" => ["lang" => "es"], "POST" => []],
     "/contact" => ["URI" => "contact.php", "GET" => ["lang" => "en"], "POST" => []]
 ];
+require_once $TO_HOME . "_functions.php";
 require_once $TO_HOME . "_router.php";
 require_once $TO_HOME . "common.php";
 ?>
