@@ -2,24 +2,25 @@
 <?php
 require_once "./_var.php";
 $routes = [
-    "/" => ["URI" => "main.php", "GET" => [], "POST" => []],
-    "/es" => ["URI" => "", "GET" => ["lang" => "es"], "POST" => []],
-    "/en" => ["URI" => "", "GET" => ["lang" => "en"], "POST" => []],
-    "/inicio" => ["URI" => "main.php", "GET" => ["lang" => "es"], "POST" => []],
-    "/home" => ["URI" => "main.php", "GET" => ["lang" => "en"], "POST" => []],
-    "/portafolio" => ["URI" => "portfolio.php", "GET" => ["lang" => "es"], "POST" => []],
-    "/portfolio" => ["URI" => "portfolio.php", "GET" => ["lang" => "en"], "POST" => []],
-    "/servicios" => ["URI" => "services.php", "GET" => ["lang" => "es"], "POST" => []],
-    "/services" => ["URI" => "services.php", "GET" => ["lang" => "en"], "POST" => []],
-    "/equipo" => ["URI" => "about.php", "GET" => ["lang" => "es"], "POST" => []],
-    "/team" => ["URI" => "about.php", "GET" => ["lang" => "en"], "POST" => []],
-    "/contacto" => ["URI" => "contact.php", "GET" => ["lang" => "es"], "POST" => []],
-    "/contact" => ["URI" => "contact.php", "GET" => ["lang" => "en"], "POST" => []]
+    "/" => ["URI" => "main.php", "GET" => [], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/es" => ["URI" => "", "GET" => ["lang" => "es"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/en" => ["URI" => "", "GET" => ["lang" => "en"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/inicio" => ["URI" => "main.php", "GET" => ["lang" => "es"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/home" => ["URI" => "main.php", "GET" => ["lang" => "en"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/portafolio" => ["URI" => "portfolio.php", "GET" => ["lang" => "es"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/portfolio" => ["URI" => "portfolio.php", "GET" => ["lang" => "en"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/servicios" => ["URI" => "services.php", "GET" => ["lang" => "es"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/services" => ["URI" => "services.php", "GET" => ["lang" => "en"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/equipo" => ["URI" => "about.php", "GET" => ["lang" => "es"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/team" => ["URI" => "about.php", "GET" => ["lang" => "en"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/contacto" => ["URI" => "contact.php", "GET" => ["lang" => "es"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
+    "/contact" => ["URI" => "contact.php", "GET" => ["lang" => "en"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php", "head" => "head.php"]],
 ];
 require_once $TO_HOME . "_functions.php";
 require_once $TO_HOME . "_router.php";
 require_once $TO_HOME . "common.php";
 ?>
+
 <head>
     <meta charset="utf-8">
     <title>COSMIC Studios</title>
@@ -59,6 +60,7 @@ require_once $TO_HOME . "common.php";
     <script src="<?= $HOME_PATH; ?>_spa.js" defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
     <div class="loading">
         <div class="load-circle-back"></div>
@@ -69,8 +71,11 @@ require_once $TO_HOME . "common.php";
         <source src="<?= $HOME_PATH; ?>img/bg.mp4" type="video/mp4" />
         <source src="<?= $HOME_PATH; ?>img/bg.webm" type="video/webm" />
     </video>
-    <header id="header" class="header"></header>
-    <div id="spa-page-content-container"></div> 
-    <footer id="footer" class="footer"></footer>
+    <div id="body">
+        <header id="header"></header>
+        <div id="spa-page-content-container"></div>
+        <footer id="footer"></footer>
+    </div>
 </body>
+
 </html>
