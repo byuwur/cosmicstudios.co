@@ -14,8 +14,6 @@ const innit_page = function () {
         Preloader
     --------------------*/
   $(window).on("load", function () {
-    $(".load-circle-back, .load-circle-fore, .load-text, .loading").fadeOut(500);
-    $(".loading").css("z-index", "9");
     /*------------------
             Portfolio filter
         --------------------*/
