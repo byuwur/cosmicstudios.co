@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <?php
-$setLocalStorage = true;
-require_once "./_var.php";
 $routes = [
     "/" => ["URI" => "main.php", "GET" => [], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
     "/es" => ["URI" => "", "GET" => ["lang" => "es"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
@@ -17,6 +15,8 @@ $routes = [
     "/contacto" => ["URI" => "contact.php", "GET" => ["lang" => "es"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
     "/contact" => ["URI" => "contact.php", "GET" => ["lang" => "en"], "POST" => [], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
 ];
+$setLocalStorage = true;
+require_once "./_var.php";
 require_once $TO_HOME . "_functions.php";
 require_once $TO_HOME . "_router.php";
 require_once $TO_HOME . "common.php";
