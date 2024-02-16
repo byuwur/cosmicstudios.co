@@ -34,3 +34,6 @@ $titles = [
     "COSMIC Studios | " . $portfolio,
     "COSMIC Studios | " . $contact
 ];
+?>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-148227598-1" async defer></script>

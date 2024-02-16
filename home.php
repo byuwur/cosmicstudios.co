@@ -60,7 +60,6 @@ require_once $TO_HOME . "common.php";
     <script src="<?= $HOME_PATH; ?>js/main.js" defer></script>
     <script src="<?= $HOME_PATH; ?>_functions.js" defer></script>
     <script src="<?= $HOME_PATH; ?>_spa.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
