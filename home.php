@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <?php
-$routes = [
-    //"/uri" => ["URI" => "file.php", "GET" => ["key" => "value"], "POST" => ["key" => "value"], "COMPONENT" => ["#id" => "file.php"]],
-    "/" => ["URI" => "main.php", "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/es" => ["URI" => "", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/en" => ["URI" => "", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/inicio" => ["URI" => "main.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/home" => ["URI" => "main.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/portafolio" => ["URI" => "portfolio.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/portfolio" => ["URI" => "portfolio.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/servicios" => ["URI" => "services.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/services" => ["URI" => "services.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/equipo" => ["URI" => "about.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/team" => ["URI" => "about.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/contacto" => ["URI" => "contact.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-    "/contact" => ["URI" => "contact.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "header.php", "#footer" => "footer.php"]],
-];
 $setLocalStorage = true;
 require_once "./_var.php";
 require_once $TO_HOME . "_functions.php";
+$routes = [
+    // "/uri" => ["URI" => "/file.php", "GET" => [..."key" => "value"...], "POST" => [..."key" => "value"...], "COMPONENT" => [..."#id" => "file.php"...]],
+    // "/" routes
+    "${ROOT_ROUTE}" => ["URI" => "/main.php", "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}es" => ["URI" => "", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}en" => ["URI" => "", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}inicio" => ["URI" => "/main.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}home" => ["URI" => "/main.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}portafolio" => ["URI" => "/portfolio.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}portfolio" => ["URI" => "/portfolio.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}servicios" => ["URI" => "/services.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}services" => ["URI" => "/services.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}equipo" => ["URI" => "/about.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}team" => ["URI" => "/about.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}contacto" => ["URI" => "/contact.php", "GET" => ["lang" => "es"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+    "${ROOT_ROUTE}contact" => ["URI" => "/contact.php", "GET" => ["lang" => "en"], "COMPONENT" => ["#header" => "/header.php", "#footer" => "/footer.php"]],
+];
 require_once $TO_HOME . "_router.php";
 require_once $TO_HOME . "common.php";
 ?>
@@ -40,26 +41,26 @@ require_once $TO_HOME . "common.php";
     <meta name="author" content="[Mateus] byUwUr" />
     <meta name="copyright" content="[Mateus] byUwUr" />
     <meta name="theme-color" content="#006" />
-    <link rel="shortcut icon" type="image/png" href="<?= $HOME_PATH; ?>img/favicon.png" />
-    <link rel="icon" type="image/png" href="<?= $HOME_PATH; ?>img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="<?= $HOME_PATH; ?>/img/favicon.png" />
+    <link rel="icon" type="image/png" href="<?= $HOME_PATH; ?>/img/favicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/bootstrap.min.css" />
-    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/fontawesome.min.css" />
-    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/magnific-popup.css" />
-    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/slicknav.min.css" />
-    <link rel="stylesheet" href="<?= $HOME_PATH; ?>css/style.css" />
-    <script src="<?= $HOME_PATH; ?>js/jquery-3.3.1.min.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>js/bootstrap.min.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>js/jquery.magnific-popup.min.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>js/mixitup.min.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>js/masonry.pkgd.min.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>js/jquery.slicknav.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>js/owl.carousel.min.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>js/main.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>_functions.js" defer></script>
-    <script src="<?= $HOME_PATH; ?>_spa.js" defer></script>
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>/css/magnific-popup.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>/css/slicknav.min.css" />
+    <link rel="stylesheet" href="<?= $HOME_PATH; ?>/css/style.css" />
+    <script src="<?= $HOME_PATH; ?>/js/jquery-3.3.1.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/js/bootstrap.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/js/mixitup.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/js/masonry.pkgd.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/js/jquery.slicknav.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/js/owl.carousel.min.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/js/main.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/_functions.js" defer></script>
+    <script src="<?= $HOME_PATH; ?>/_spa.js" defer></script>
 </head>
 
 <body>
@@ -69,8 +70,8 @@ require_once $TO_HOME . "common.php";
         <div class="load-text"><?= $load; ?></div>
     </div>
     <video class="video-container" muted loop autoplay>
-        <source src="<?= $HOME_PATH; ?>img/bg.mp4" type="video/mp4" />
-        <source src="<?= $HOME_PATH; ?>img/bg.webm" type="video/webm" />
+        <source src="<?= $HOME_PATH; ?>/img/bg.mp4" type="video/mp4" />
+        <source src="<?= $HOME_PATH; ?>/img/bg.webm" type="video/webm" />
     </video>
     <header id="header"></header>
     <div id="spa-page-content-container"></div>

@@ -5,11 +5,11 @@ require_once $TO_HOME . "common.php";
 <div class="logo spad">
     <div class="container">
         <div class="logo__carousel owl-carousel">
-            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>img/logos/byuwur.png" alt=""></a>
-            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>img/logos/itfip.png" alt=""></a>
-            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>img/logos/bm.png" alt=""></a>
-            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>img/logos/eaaa.png" alt=""></a>
-            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>img/logos/concejoespinal.png" alt=""></a>
+            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>/img/logos/byuwur.png" alt=""></a>
+            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>/img/logos/itfip.png" alt=""></a>
+            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>/img/logos/bm.png" alt=""></a>
+            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>/img/logos/eaaa.png" alt=""></a>
+            <a href="javascript:;" class="logo__item"><img src="<?= $HOME_PATH; ?>/img/logos/concejoespinal.png" alt=""></a>
         </div>
     </div>
 </div>

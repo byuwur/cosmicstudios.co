@@ -53,7 +53,7 @@ require_once $TO_HOME . "breadcrumb.php";
         });
         $.ajax({
             type: "POST",
-            url: "<?= $HOME_PATH; ?>_contact.php",
+            url: "<?= $HOME_PATH; ?>/_contact.php",
             data: formData,
             dataType: "json",
             success: function(response) {

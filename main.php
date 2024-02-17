@@ -8,7 +8,7 @@ require_once $TO_HOME . "common.php";
             <div class="col-lg-6 hero__text">
                 <span><?= $carousel_sub[$i]; ?></span>
                 <h2><?= $title; ?></h2>
-                <a href="<?= $TO_HOME . $carousel_link[$i]; ?>" class="primary-btn"><?= $carousel_link_text[$i]; ?></a>
+                <a href="<?= $ROOT_ROUTE . $carousel_link[$i]; ?>" class="primary-btn"><?= $carousel_link_text[$i]; ?></a>
             </div>
         </div>
     <?php } ?>
@@ -23,7 +23,7 @@ require_once $TO_HOME . "common.php";
                 </div>
                 <div class="col-md-8">
                     <p><?= $services_short; ?></p>
-                    <a href="<?= $TO_HOME . $services; ?>" class="primary-btn"><?= $meetservices; ?></a>
+                    <a href="<?= $ROOT_ROUTE . $services; ?>" class="primary-btn"><?= $meetservices; ?></a>
                 </div>
             </div>
             <?php for ($i = 0; $i < 3; $i++) { ?>

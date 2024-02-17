@@ -7,7 +7,7 @@ require_once $TO_HOME . "common.php";
         <div class="footer__top">
             <div class="row">
                 <div class="col-4">
-                    <a href="<?= $TO_HOME; ?>">
+                    <a href="<?= $ROOT_ROUTE; ?>">
                         <div class="footer__top__logo"><i></i></div>
                     </a>
                 </div>
@@ -16,8 +16,8 @@ require_once $TO_HOME . "common.php";
                         <?php foreach ($cosmic_link as $i => $link) { ?>
                             <a href="<?= $link; ?>" target="_blank"><i class="<?= $cosmic_link_icon[$i]; ?>"></i></a>
                         <?php } ?>
-                        <a href="<?= $TO_HOME; ?>es" title="Español"><img src="<?= $HOME_PATH; ?>img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
-                        <a href="<?= $TO_HOME; ?>en" title="English"><img src="<?= $HOME_PATH; ?>img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
+                        <a href="<?= $ROOT_ROUTE; ?>es" title="Español"><img src="<?= $HOME_PATH; ?>/img/co.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
+                        <a href="<?= $ROOT_ROUTE; ?>en" title="English"><img src="<?= $HOME_PATH; ?>/img/uk.png" width="16px" height="12px" style="margin:0 0 4px 0;" alt="" /></a>
                     </div>
                 </div>
             </div>
