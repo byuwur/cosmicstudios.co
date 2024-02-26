@@ -1,6 +1,7 @@
 <?php
 $_GET['title'] = 5;
 require_once "./_var.php";
+require_once $TO_HOME . "_routes.php";
 require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
 ?>
