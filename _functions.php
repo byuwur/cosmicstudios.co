@@ -60,6 +60,13 @@ function sanitize_value($input, string $type = "")
     return filter_var($input, $filterMap[$type] ?? FILTER_UNSAFE_RAW);
 }
 // --- functions ---
+function error_crash(int $status, string $message, string $error_file)
+{
+    $_GET["e"] = $status;
+    $_POST["custom_error_message"] = $message;
+    require_once $error_file;
+    exit;
+}
 function suppress_errors()
 {
     error_reporting(0);
