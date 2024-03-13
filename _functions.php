@@ -9,6 +9,7 @@ function api_respond(int $status, bool $error, string $message, array $data = []
     $response->message = $message;
     $response->data = $data;
     echo json_encode($response, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    ob_end_flush();
     exit;
 }
 function make_http_request(string $url, array $get = [], array $post = [])
@@ -65,6 +66,7 @@ function error_crash(int $status, string $message, string $error_file)
     $_GET["e"] = $status;
     $_POST["custom_error_message"] = $message;
     require_once $error_file;
+    ob_end_flush();
     exit;
 }
 function suppress_errors()
@@ -81,6 +83,7 @@ function exit_json($json)
 {
     header("Content-Type: application/json");
     echo json_encode($json, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    ob_end_flush();
     exit;
 }
 function print_json($json)
@@ -121,7 +124,8 @@ function show_modal_back($state = "success", $title = "INFO.", $message = "Messa
     });
     </script>';
 }
-function get_mime_type($filename) {
+function get_mime_type($filename)
+{
     $mime = [
         'aac' => 'audio/aac',
         'abw' => 'application/x-abiword',
@@ -191,7 +195,7 @@ function get_mime_type($filename) {
         '3gp' => 'video/3gpp',
         '3g2' => 'video/3gpp2',
         '7z' => 'application/x-7z-compressed'
-    ];    
+    ];
     $type = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
     return $mime[$type] ?? "application/octet-stream";
 }

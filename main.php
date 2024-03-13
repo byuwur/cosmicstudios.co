@@ -1,7 +1,12 @@
 <?php
 require_once "./_var.php";
+//require_once $TO_HOME . "_functions.php";
+//require_once $TO_HOME . "_config.php";
 require_once $TO_HOME . "_routes.php";
+//require_once $TO_HOME . "_router.php";
+//require_once $TO_HOME . "_auth.php";
 require_once $TO_HOME . "common.php";
+// --- PHP ---
 ?>
 <section class="hero__slider owl-carousel video-foreground">
     <?php foreach ($carousel_title as $i => $title) { ?>
@@ -60,4 +65,7 @@ require_once $TO_HOME . "common.php";
 <?php
 require_once $TO_HOME . "extra.services.php";
 require_once $TO_HOME . "extra.about.php";
+//login([], true);
+// Always output due to "/_var.php" invoking ob_start();
+ob_end_flush();
 ?>

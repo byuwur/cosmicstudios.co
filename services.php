@@ -1,8 +1,14 @@
 <?php
 $_GET['title'] = 3;
 require_once "./_var.php";
+//require_once $TO_HOME . "_functions.php";
+//require_once $TO_HOME . "_config.php";
+//require_once $TO_HOME . "_routes.php";
+//require_once $TO_HOME . "_router.php";
+//require_once $TO_HOME . "_auth.php";
 require_once $TO_HOME . "common.php";
 require_once $TO_HOME . "breadcrumb.php";
+// --- PHP ---
 ?>
 <section class="services-page spad">
     <div class="container">
@@ -25,4 +31,7 @@ require_once $TO_HOME . "breadcrumb.php";
 </script>
 <?php
 require_once $TO_HOME . "extra.services.php";
+//login([], true);
+// Always output due to "/_var.php" invoking ob_start();
+ob_end_flush();
 ?>
